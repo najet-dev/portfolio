@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--box icons-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">N.R</a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <nav class="navbar">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="about.html">A propos</a>
+        <a href="skills.html">Compétences</a>
+        <a href="project.html">Projets</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" class="toggle-theme"><i class="bx bx-moon toggle-icon"></i></a>
+    </header>
+    <!-- home section design -->
+    <section class="home" id="home">
+      <button onclick="switchLanguage()" id="langButton">Fr</button>
+
+      <div class="home-content">
+        <div class="text-container">
+          <h1>Najet Ramoul</h1>
+          <div id="lang-buttons">
+        </div>
+          <div class="text-animate">
+            <h3  class="french">Développeuse Full-Stack</h3>
+            <h3  class="english">Full-Stack Developer</h3>
+            <div class="btn-box">
+              <a href="#" id="cv-button" class="btn">CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home-img">
+        <img src="./images/najet.png" alt="Image" />
+      </div>
+      
+      <div class="social">
+        <a href="https://www.linkedin.com/in/najet-ramoul-312845233/"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
