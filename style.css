@@ -290,7 +290,6 @@ span {
   background: var(--second-bg-color);
 }
 /******page skills********/
-/* Le reste du code inchangé */
 
 .skills-column:last-child .title {
   margin-top: 50px;
@@ -299,41 +298,32 @@ span {
   font-size: 3rem;
   margin: 0 0 1.5rem;
 }
-/* Container qui utilise Flexbox pour aligner les images */
 .skills-content {
   display: flex;
-  justify-content: center; /* Alignement horizontal au centre */
-  align-items: center; /* Alignement vertical au centre */
-  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; /
 }
-
-/* Appliquer un style aux images à l'intérieur de la classe "progress" */
 .hardSkills img {
-  width: 280px; /* Remplacez par la largeur souhaitée */
-  height: 280px; /* Remplacez par la hauteur souhaitée */
-  margin: 10px; /* Espacement entre les images */
+  width: 280px; 
+  height: 280px;
+  margin: 10px; 
 }
-/* Appliquer un style aux Soft Skills */
 .softSkills {
-  margin: 20px; /* Espacement entre les Soft Skills */
+  margin: 20px; 
 }
 h2 {
   margin-bottom: 50px;
 }
-/* Style du texte des Soft Skills */
 .soft {
-  font-size: 2.5rem; /* Taille de police des Soft Skills */
-  padding: 5px; /* Espacement interne des Soft Skills */
+  font-size: 2.5rem; 
+  padding: 5px; 
 }
-
-/***contact*****/
-
 img {
-  width: 280px; /* Remplacez par la largeur souhaitée */
-  height: 280px; /* Remplacez par la hauteur souhaitée */
-  margin: 10px; /* Espacement entre les images */
+  width: 280px; 
+  height: 280px; 
+  margin: 10px; 
 }
-
 #container {
   width: 50vw;
   mask: linear-gradient(90deg, transparent, white 20%, white 60%, transparent);
@@ -373,8 +363,56 @@ li {
 }
 /*************contact*******/
 .contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
   min-height: auto;
   padding-bottom: 7rem;
+  text-align: center; /* Centrer le texte */
+}
+.contact-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.contact-info,
+.contact-form {
+  width: calc(95% - 10px); /* Ajustez la largeur selon vos besoins, moins la moitié de l'espace entre les colonnes */
+  text-align: center;
+  padding: 1rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact-info-item i {
+  margin-right: 0.5rem;
+  font-size: 24px; /* Ajustez la taille selon vos préférences */
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 20px;
+}
+
+
+.contact-form {
+  grid-column: 2 / 3;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 20px;
 }
 .contactMe {
   font-size: 5rem;
