@@ -35,7 +35,7 @@ toggleThemeButton.addEventListener("click", () => {
   localStorage.setItem("theme", isDarkMode ? "dark" : "light");
 });
 
-////PDF
+//PDF
 document.addEventListener("DOMContentLoaded", function () {
   const boutonCV = document.getElementById("cv-button");
 
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.removeChild(lien);
   });
 });
-///carousel
+//carousel
 const list = document.querySelector("#list");
 const listContent = Array.from(list.children);
 
@@ -105,7 +105,7 @@ function switchLanguage() {
 // Appeler la fonction pour initialiser la page avec la langue stockée localement
 switchLanguage();
 
-////Email
+//Email
 function sendMail() {
   emailjs.init("OLC9XWnhpO7QsE0DA");
 

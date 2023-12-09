@@ -27,97 +27,112 @@
         ></a>
       </nav>
     </header>
-    <div class="contact" id="contact">
-      <h2 class="contactMe">Contactez-<span>Moi</span> !</h2>
+    <main class="contact">
+      <div id="contact">
+        <h2 class="contactMe">Contactez-<span>Moi</span> !</h2>
 
-      <div class="contact-content">
-        <div class="contact-info">
-          <div class="contact-info-item">
-            <i class="bx bxs-map"></i>
-            <p>Mulhouse, France</p>
-          </div>
-          <div class="contact-info-item">
-            <i class="bx bx-mail-send"></i>
-            <p>najet.ramoul68@gmail.com</p>
-          </div>
-          <div class="contact-info-item">
-            <i class="bx bx-phone"></i>
-            <p>06 59 57 95 62</p>
-          </div>
-        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-info-item">
+              <i class="bx bxs-map"></i>
+              <p>Mulhouse, France</p>
+            </div>
 
-        <div class="contact-form">
-          <form action="">
-            <div class="column">
-              <div class="input-box">
-                <div class="input-field">
-                  <input
-                    type="text"
-                    id="sendername"
-                    placeholder="Nom de l'expéditeur"
-                    required
-                  /><br />
-                  <span class="focus"></span>
-                </div>
+            <div class="contact-info-item">
+              <i class="bx bx-mail-send"></i>
+              <p>najet.ramoul68@gmail.com</p>
+            </div>
 
-                <div class="input-field">
-                  <input
-                    type="text"
-                    placeholder="À (Adresse Email)"
-                    id="to"
-                    required
-                  /><br />
-                  <span class="focus"></span>
+            <div class="contact-info-item">
+              <i class="bx bx-phone"></i>
+              <p>06 59 57 95 62</p>
+            </div>
+
+            <div class="social">
+              <a
+                href="https://www.linkedin.com/in/najet-ramoul-312845233/"
+                target="_blank"
+              >
+                <i class="bx bxl-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form action="">
+              <div class="column">
+                <div class="input-box">
+                  <div class="input-field">
+                    <input
+                      type="text"
+                      id="sendername"
+                      placeholder="Nom de l'expéditeur"
+                      required
+                    /><br />
+                    <span class="focus"></span>
+                  </div>
+                  <div class="input-field">
+                    <input
+                      type="text"
+                      placeholder="À (Adresse Email)"
+                      id="to"
+                      required
+                    /><br />
+                    <span class="focus"></span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="column">
-              <div class="input-box">
-                <div class="input-field">
-                  <input
-                    type="text"
-                    placeholder="Objet"
-                    id="subject"
-                    required
-                  /><br />
-                  <span class="focus"></span>
-                </div>
-
-                <div class="input-field">
-                  <input
-                    type="text"
-                    id="replyto"
-                    placeholder="Email du destinataire"
-                    required
-                  /><br />
-                  <span class="focus"></span>
+              <div class="column">
+                <div class="input-box">
+                  <div class="input-field">
+                    <input
+                      type="text"
+                      placeholder="Objet"
+                      id="subject"
+                      required
+                    /><br />
+                    <span class="focus"></span>
+                  </div>
+                  <div class="input-field">
+                    <input
+                      type="text"
+                      id="replyto"
+                      placeholder="Email du destinataire"
+                      required
+                    /><br />
+                    <span class="focus"></span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="textarea-field">
-              <br />
-              <textarea
-                id="message"
-                cols="40"
-                rows="10"
-                placeholder="Message"
-                required
-              ></textarea
-              ><br />
-              <span class="focus"></span>
-            </div>
-
-            <div class="btn-box btns">
-              <button type="button" class="btn" onclick="sendMail();">
-                Envoyer
-              </button>
-            </div>
-          </form>
+              <div class="textarea-field">
+                <br />
+                <textarea
+                  id="message"
+                  cols="40"
+                  rows="10"
+                  placeholder="Message"
+                  required
+                ></textarea
+                ><br />
+                <span class="focus"></span>
+              </div>
+              <div class="btn-box btns">
+                <button type="button" class="btn" onclick="sendMail();">
+                  Envoyer
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <p>&copy; 2023 - Najet Ramoul</p>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
