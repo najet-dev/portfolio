@@ -93,7 +93,7 @@ html {
 .home {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Pour répartir l'espace entre le texte et l'image */
+  justify-content: space-between;
   padding: 0 9%;
   background-color: var(--bg-color);
 }
@@ -129,7 +129,7 @@ html {
   width: 85%;
   font-size: 1.6rem;
   margin: 2rem 0 4rem;
-  text-justify: distribute-all-lines; /* Utiliser distribute-all-lines pour un espacement plus uniforme */
+  text-justify: distribute-all-lines;
 }
 
 .btn-box {
@@ -226,45 +226,28 @@ html {
 
 /****************page about***************/
 .about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-  background: var(--bg-color);
-  padding-bottom: 6rem;
+  padding-top: 50px;
 }
 .about h2 {
   font-size: 5rem;
-  margin-bottom: 80px;
 }
-
 .contactMe,
 .heading {
   text-align: center;
-  margin-top: 70px; /* Vous pouvez ajuster cette valeur selon vos préférences */
+  margin-top: 110px;
 }
 
-/* Styles pour la position des titres sur les pages */
-.contact,
-.skills,
-.about {
-  padding-top: 50px; /* Vous pouvez ajuster cette valeur selon vos préférences */
-}
 span {
   color: var(--main-color);
 }
 .about-img {
-  position: relative;
-  width: 25rem;
-  height: 20rem;
+  padding-top: 35px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .about-img img {
-  width: 90%;
   border-radius: 50%;
   border: 0.2rem solid var(--main-color);
 }
@@ -272,12 +255,15 @@ span {
   text-align: center;
 }
 .about-content h3 {
-  margin-top: 15px;
+  margin-top: 45px;
   font-size: 2.6rem;
 }
 .about-content p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin: 2rem 0 3rem;
+  line-height: 1.3;
+  padding: 0 500px 0 500px;
+  text-align: justify;
 }
 .btn-box.btns {
   display: inline-block;
@@ -287,6 +273,9 @@ span {
   background: var(--second-bg-color);
 }
 /******page skills********/
+.skills {
+  padding-top: 50px;
+}
 .skills h2 {
   font-size: 5rem;
   margin-bottom: 80px;
@@ -337,7 +326,8 @@ li {
   gap: 20px;
   min-height: auto;
   padding-bottom: 7rem;
-  text-align: center; /* Centrer le texte */
+  padding-top: 50px;
+  text-align: center;
 }
 .contact-content {
   display: grid;
@@ -347,9 +337,7 @@ li {
 
 .contact-info,
 .contact-form {
-  width: calc(
-    95% - 10px
-  ); /* Ajustez la largeur selon vos besoins, moins la moitié de l'espace entre les colonnes */
+  width: calc(95% - 10px);
   text-align: center;
   padding: 1rem;
 }
@@ -362,11 +350,11 @@ li {
 
 .contact-info-item i {
   margin-right: 0.5rem;
-  font-size: 24px; /* Ajustez la taille selon vos préférences */
+  font-size: 24px;
 }
 
 .contact-info p {
-  margin: 0;
+  margin: 0.5rem 0;
   font-size: 20px;
 }
 .contact-form {
@@ -376,10 +364,6 @@ li {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-.contact-info p {
-  margin: 0.5rem 0;
-  font-size: 20px;
 }
 .contactMe {
   font-size: 5rem;
