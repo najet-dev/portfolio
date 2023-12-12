@@ -62,48 +62,6 @@ listContent.forEach((item) => {
   duplicatedItem.setAttribute("aria-hidden", true);
   list.appendChild(duplicatedItem);
 });
-//changement de langue
-// Fonction pour changer la langue
-function switchLanguage() {
-  let langButton = document.getElementById("langButton");
-  let frenchElements = document.querySelectorAll(".french");
-  let englishElements = document.querySelectorAll(".english");
-
-  // Récupérer la langue actuelle depuis le stockage local
-  let currentLanguage = localStorage.getItem("language") || "fr";
-
-  // Si la langue actuelle est le français, basculez vers l'anglais et vice versa
-  if (currentLanguage === "fr") {
-    langButton.innerHTML = "En";
-
-    frenchElements.forEach(function (element) {
-      element.style.display = "none";
-    });
-
-    englishElements.forEach(function (element) {
-      element.style.display = "block";
-    });
-
-    // Mettre à jour la langue dans le stockage local
-    localStorage.setItem("language", "en");
-  } else {
-    langButton.innerHTML = "Fr";
-
-    frenchElements.forEach(function (element) {
-      element.style.display = "block";
-    });
-
-    englishElements.forEach(function (element) {
-      element.style.display = "none";
-    });
-
-    // Mettre à jour la langue dans le stockage local
-    localStorage.setItem("language", "fr");
-  }
-}
-
-// Appeler la fonction pour initialiser la page avec la langue stockée localement
-switchLanguage();
 
 //Email
 function sendMail() {
@@ -166,4 +124,23 @@ function validateEmail(email) {
   return regex.test(email);
 }
 
-///Robot
+let sections = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll("header nav a");
+
+window.onscroll = () => {
+  sections.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 100;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach((links) => {
+        links.classList.remove("active");
+        document
+          .querySelector("header nav a[href*=" + id + "]")
+          .classList.add("active");
+      });
+    }
+  });
+};
