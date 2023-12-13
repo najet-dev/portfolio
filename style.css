@@ -48,6 +48,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 main {
   grid-row: 2 / 3;
@@ -430,6 +431,9 @@ li {
   cursor: pointer;
 }
 /*********************projects***************************/
+.box .content {
+  color: var(--text-color);
+}
 .container {
   display: grid;
   width: 90%;
@@ -442,18 +446,12 @@ li {
 .box {
   padding: 30px;
   position: relative;
-  background-color: #000;
   height: 340px;
   cursor: pointer;
 }
 .box:before {
   content: "";
-  background: linear-gradient(
-    45deg,
-    rgba(50, 43, 255, 1) 0%,
-    rgba(109, 10, 61, 1) 76%,
-    rgba(128, 0, 0, 1) 100%
-  );
+  background: rgb(155, 153, 153);
   position: absolute;
   top: -2px;
   bottom: -2px;
