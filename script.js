@@ -110,21 +110,20 @@ function sendMail() {
   emailjs.init("OLC9XWnhpO7QsE0DA");
 
   // Récupérer les valeurs des champs
-  let sendername = document.querySelector("#sendername").value;
-  let to = document.querySelector("#to").value;
+  let sendername = document.querySelector("#name").value;
+  let to = document.querySelector("#email").value;
   let subject = document.querySelector("#subject").value;
-  let replyto = document.querySelector("#replyto").value;
   let message = document.querySelector("#message").value;
 
   // Vérifier si tous les champs obligatoires sont remplis
-  if (!sendername || !to || !subject || !replyto || !message) {
+  if (!sendername || !to || !subject || !message) {
     alert("Veuillez remplir tous les champs du formulaire.");
     return;
   }
 
   // Vérifier si les champs email sont valides
-  if (!validateEmail(to) || !validateEmail(replyto)) {
-    alert("Veuillez entrer des adresses email valides.");
+  if (!validateEmail(to)) {
+    alert("Veuillez entrer une adresse email valide.");
     return;
   }
 
@@ -137,7 +136,6 @@ function sendMail() {
     sendername: sendername,
     to: to,
     subject: subject,
-    replyto: replyto,
     message: message,
   };
 
@@ -148,10 +146,9 @@ function sendMail() {
       alert("E-mail envoyé avec succès!");
 
       // Effacer les champs du formulaire après l'envoi réussi
-      document.querySelector("#sendername").value = "";
-      document.querySelector("#to").value = "";
+      document.querySelector("#name").value = "";
+      document.querySelector("#email").value = "";
       document.querySelector("#subject").value = "";
-      document.querySelector("#replyto").value = "";
       document.querySelector("#message").value = "";
     })
     .catch((error) => {
@@ -166,4 +163,8 @@ function validateEmail(email) {
   return regex.test(email);
 }
 
-///Robot
+//Agrandir les images
+function toggleImageSize(image) {
+  image.classList.toggle("enlarged");
+}
+//Robot
