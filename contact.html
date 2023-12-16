@@ -65,7 +65,6 @@
               </a>
             </div>
           </div>
-
           <div class="contact-form">
             <form action="">
               <div class="column">
@@ -73,17 +72,18 @@
                   <div class="input-field">
                     <input
                       type="text"
-                      id="sendername"
+                      id="name"
                       placeholder="Nom de l'expéditeur"
                       required
                     /><br />
                     <span class="focus"></span>
                   </div>
+
                   <div class="input-field">
                     <input
                       type="text"
-                      placeholder="À (Adresse Email)"
-                      id="to"
+                      placeholder="Email"
+                      id="email"
                       required
                     /><br />
                     <span class="focus"></span>
@@ -96,40 +96,31 @@
                   <div class="input-field">
                     <input
                       type="text"
-                      placeholder="Objet"
+                      placeholder="Sujet"
                       id="subject"
                       required
                     /><br />
                     <span class="focus"></span>
                   </div>
-                  <div class="input-field">
-                    <input
-                      type="text"
-                      id="replyto"
-                      placeholder="Email du destinataire"
+
+                  <div class="textarea-field">
+                    <br />
+                    <textarea
+                      id="message"
+                      cols="40"
+                      rows="10"
+                      placeholder="Message"
                       required
-                    /><br />
+                    ></textarea
+                    ><br />
                     <span class="focus"></span>
                   </div>
+                  <div class="btn-box btns">
+                    <button type="button" class="btn" onclick="sendMail();">
+                      Envoyer
+                    </button>
+                  </div>
                 </div>
-              </div>
-
-              <div class="textarea-field">
-                <br />
-                <textarea
-                  id="message"
-                  cols="40"
-                  rows="10"
-                  placeholder="Message"
-                  required
-                ></textarea
-                ><br />
-                <span class="focus"></span>
-              </div>
-              <div class="btn-box btns">
-                <button type="button" class="btn" onclick="sendMail();">
-                  Envoyer
-                </button>
               </div>
             </form>
           </div>
