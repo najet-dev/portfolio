@@ -25,19 +25,20 @@
       <a href="index.html" class="logo">N.R</a>
       <div class="bx bx-menu" id="menu-icon"></div>
       <nav class="navbar">
-        <a href="index.html" class="active">Accueil</a>
-        <a href="about.html">A propos</a>
-        <a href="skills.html">Compétences</a>
-        <a href="project.html">Projets</a>
-        <a href="contact.html">Contact</a>
-        <a href="#" class="toggle-theme"
-          ><i class="bx bx-moon toggle-icon"></i
-        ></a>
+        <a href="index.html" class="menu-link" id="accueil-link">Accueil</a>
+        <a href="about.html" class="menu-link" id="about-link">A propos</a>
+        <a href="skills.html" class="menu-link" id="skills-link">Compétences</a>
+        <a href="project.html" class="menu-link" id="project-link">Projets</a>
+        <a href="contact.html" class="menu-link" id="contact-link">Contact</a>
+        <a href="#" class="toggle-theme">
+          <i class="bx bx-moon toggle-icon"></i>
+        </a>
+        <span class="active-nav"></span>
       </nav>
     </header>
-    <main class="contact">
+    <main class="contact" id="home">
       <div id="contact">
-        <h2 class="contactMe">Contactez-<span>Moi</span> !</h2>
+        <h2 class="heading">Contactez-<span>Moi</span> !</h2>
 
         <div class="contact-content">
           <div class="contact-info">
@@ -67,67 +68,62 @@
           </div>
           <div class="contact-form">
             <form action="">
-              <div class="column">
-                <div class="input-box">
-                  <div class="input-field">
-                    <input
-                      type="text"
-                      id="name"
-                      placeholder="Nom de l'expéditeur"
-                      required
-                    /><br />
-                    <span class="focus"></span>
-                  </div>
+              <div class="form-columns">
+                <div class="column">
+                  <div class="input-box">
+                    <div class="input-field">
+                      <input type="text" id="name" placeholder="Nom" required />
+                      <span class="focus"></span>
+                    </div>
 
-                  <div class="input-field">
-                    <input
-                      type="text"
-                      placeholder="Email"
-                      id="email"
-                      required
-                    /><br />
-                    <span class="focus"></span>
+                    <div class="input-field">
+                      <input
+                        type="text"
+                        placeholder="Email"
+                        id="email"
+                        required
+                      />
+                      <span class="focus"></span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="column">
                 <div class="input-box">
                   <div class="input-field">
                     <input
                       type="text"
-                      placeholder="Sujet"
                       id="subject"
+                      placeholder="Sujet"
                       required
-                    /><br />
+                    />
+
                     <span class="focus"></span>
                   </div>
 
                   <div class="textarea-field">
-                    <br />
                     <textarea
                       id="message"
                       cols="40"
                       rows="10"
                       placeholder="Message"
                       required
-                    ></textarea
-                    ><br />
+                    ></textarea>
                     <span class="focus"></span>
                   </div>
-                  <div class="btn-box btns">
-                    <button type="button" class="btn" onclick="sendMail();">
-                      Envoyer
-                    </button>
-                  </div>
                 </div>
+              </div>
+
+              <div class="btn-box btns">
+                <button type="button" class="btn" onclick="sendMail();">
+                  Envoyer
+                </button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </main>
-    <footer>
+    <footer class="contact-footer">
       <div class="footer">
         <p>Copyright &copy; 2023 - Najet Ramoul</p>
       </div>

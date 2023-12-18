@@ -1,4 +1,5 @@
-// Fonction pour définir le thème en fonction du choix de l'utilisateur
+console.log("Script.js is running on this page");
+// Function to set theme based on user choice
 function setThemeMode(isDarkMode) {
   const toggleIcon = document.querySelector(".toggle-icon");
 
@@ -13,7 +14,7 @@ function setThemeMode(isDarkMode) {
   }
 }
 
-// Fonction pour basculer entre le mode sombre et clair
+// Function to switch between dark and light mode
 function toggleThemeMode() {
   const isDarkMode = document.body.classList.contains("dark-mode");
   setThemeMode(!isDarkMode);
@@ -23,87 +24,76 @@ function toggleThemeMode() {
 const toggleThemeButton = document.querySelector(".toggle-theme");
 toggleThemeButton.addEventListener("click", toggleThemeMode);
 
-// Vérifier si l'utilisateur a déjà choisi un thème
+// Event listener for theme change button
 const storedTheme = localStorage.getItem("theme");
 if (storedTheme) {
   setThemeMode(storedTheme === "dark");
 }
 
-// Enregistrer le choix de l'utilisateur dans le stockage local
+// Save user choice to local storage
 toggleThemeButton.addEventListener("click", () => {
   const isDarkMode = document.body.classList.contains("dark-mode");
   localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+});
+
+//Menu active
+document.addEventListener("DOMContentLoaded", function () {
+  // Récupérer l'URL actuelle
+  let currentUrl = window.location.href;
+
+  // Sélectionner tous les liens du menu
+  let menuLinks = document.querySelectorAll(".menu-link");
+
+  // Parcourir chaque lien et vérifier s'il correspond à l'URL actuelle
+  menuLinks.forEach(function (link) {
+    let linkUrl = link.href;
+
+    // Comparer les parties de chemin de l'URL
+    if (currentUrl.includes(linkUrl)) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
 });
 
 //PDF
 document.addEventListener("DOMContentLoaded", function () {
   const boutonCV = document.getElementById("cv-button");
 
-  boutonCV.addEventListener("click", function () {
-    // Créer un élément de lien pour déclencher le téléchargement
-    const lien = document.createElement("a");
-    lien.href = "./images/cv.pdf"; // Mettez le chemin correct vers votre fichier PDF
-    lien.download = "cv.pdf";
+  if (boutonCV) {
+    boutonCV.addEventListener("click", function () {
+      console.log("Button clicked!");
 
-    // Ajouter le lien au document et déclencher le téléchargement
-    document.body.appendChild(lien);
-    lien.click();
+      const lien = document.createElement("a");
+      lien.href = "./images/cv.pdf";
+      lien.download = "cv.pdf";
 
-    // Supprimer le lien du document
-    document.body.removeChild(lien);
-  });
-});
-//carousel
-const list = document.querySelector("#list");
-const listContent = Array.from(list.children);
+      // Ajouter le lien au document et déclencher le téléchargement
+      document.body.appendChild(lien);
+      lien.click();
 
-listContent.forEach((item) => {
-  const duplicatedItem = item.cloneNode(true);
-  duplicatedItem.setAttribute("aria-hidden", true);
-  list.appendChild(duplicatedItem);
-});
-//changement de langue
-// Fonction pour changer la langue
-function switchLanguage() {
-  let langButton = document.getElementById("langButton");
-  let frenchElements = document.querySelectorAll(".french");
-  let englishElements = document.querySelectorAll(".english");
-
-  // Récupérer la langue actuelle depuis le stockage local
-  let currentLanguage = localStorage.getItem("language") || "fr";
-
-  // Si la langue actuelle est le français, basculez vers l'anglais et vice versa
-  if (currentLanguage === "fr") {
-    langButton.innerHTML = "En";
-
-    frenchElements.forEach(function (element) {
-      element.style.display = "none";
+      // Supprimer le lien du document
+      document.body.removeChild(lien);
     });
-
-    englishElements.forEach(function (element) {
-      element.style.display = "block";
-    });
-
-    // Mettre à jour la langue dans le stockage local
-    localStorage.setItem("language", "en");
   } else {
-    langButton.innerHTML = "Fr";
-
-    frenchElements.forEach(function (element) {
-      element.style.display = "block";
-    });
-
-    englishElements.forEach(function (element) {
-      element.style.display = "none";
-    });
-
-    // Mettre à jour la langue dans le stockage local
-    localStorage.setItem("language", "fr");
+    console.error("Élément avec l'ID 'cv-button' non trouvé");
   }
-}
+});
 
-// Appeler la fonction pour initialiser la page avec la langue stockée localement
-switchLanguage();
+//carousel
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.querySelector(".skills")) {
+    const list = document.querySelector("#list");
+    const listContent = Array.from(list.children);
+
+    listContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      list.appendChild(duplicatedItem);
+    });
+  }
+});
 
 //Email
 function sendMail() {
@@ -163,8 +153,21 @@ function validateEmail(email) {
   return regex.test(email);
 }
 
-//Agrandir les images
-function toggleImageSize(image) {
-  image.classList.toggle("enlarged");
-}
+//toggle icon navbar
+const icons = document.getElementById("icons");
+const nav = document.querySelector(".navbar");
+const closeBtn = document.createElement("div");
+closeBtn.className = "close-btn";
+closeBtn.innerHTML = "&times;";
+
+// Function to toggle the menu
+let menuIcon = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
+
+menuIcon.onclick = () => {
+  console.log("Menu Icon Clicked");
+  menuIcon.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
+  console.log("Menu State:", navbar.classList.contains("active"));
+};
 //Robot

@@ -10,8 +10,15 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.legacy.js"
+    ></script>
   </head>
   <body>
     <header class="header">
@@ -28,25 +35,105 @@
         ></a>
       </nav>
     </header>
-    <h1>Send email</h1>
-    sender Name
-    <input type="text" id="sendername" /> <br />
-    To (Email)
-    <input type="text" id="to" /> <br />
-    Subject
-    <input type="text" id="subject" /> <br />
-    Reply To (Email)
-    <input type="text" id="replyto" /> <br />
-    Message <br />
-    <textarea id="message" cols="40" rows="10"></textarea> <br />
-    <button onclick="sendMail();">Send</button>
-    <mode-viewer>
-      <div class="robo">
-        
+    <main class="contact">
+      <div id="contact">
+        <h2 class="contactMe">Contactez-<span>Moi</span> !</h2>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-info-item">
+              <i class="bx bxs-map"></i>
+              <p>Mulhouse, France</p>
+            </div>
+
+            <div class="contact-info-item">
+              <i class="bx bx-mail-send"></i>
+              <p>najet.ramoul68@gmail.com</p>
+            </div>
+
+            <div class="contact-info-item">
+              <i class="bx bx-phone"></i>
+              <p>06 59 57 95 62</p>
+            </div>
+
+            <div class="social">
+              <a
+                href="https://www.linkedin.com/in/najet-ramoul-312845233/"
+                target="_blank"
+              >
+                <i class="bx bxl-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form action="">
+              <div class="form-columns">
+                <div class="column">
+                  <div class="input-box">
+                    <div class="input-field">
+                      <input
+                        type="text"
+                        id="name"
+                        placeholder="Nom de l'expéditeur"
+                        required
+                      />
+                      <span class="focus"></span>
+                    </div>
+
+                    <div class="input-field">
+                      <input
+                        type="text"
+                        placeholder="Email"
+                        id="email"
+                        required
+                      />
+                      <span class="focus"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column">
+                  <div class="input-box">
+                    <div class="input-field">
+                      <input
+                        type="text"
+                        id="subject"
+                        placeholder="Sujet"
+                        required
+                      />
+
+                      <span class="focus"></span>
+                    </div>
+
+                    <div class="textarea-field">
+                      <textarea
+                        id="message"
+                        cols="40"
+                        rows="10"
+                        placeholder="Message"
+                        required
+                      ></textarea>
+                      <span class="focus"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="btn-box btns">
+                <button type="button" class="btn" onclick="sendMail();">
+                  Envoyer
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-
-    </mode-viewer>
-
+    </main>
+    <footer>
+      <div class="footer">
+        <p>Copyright &copy; 2023 - Najet Ramoul</p>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
