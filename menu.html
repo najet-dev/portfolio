@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <!--box icons-->
+    <!-- Box icons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -28,28 +28,34 @@
       </nav>
     </header>
 
-    <main class="about" id="about">
-      <h2 class="heading">Apropos de <span>Moi</span></h2>
-
-      <div class="about-img">
-        <img src="images/avatar.png" alt="picture" />
+    <!-- Home section design -->
+    <main class="home" id="home">
+      <div class="home-content">
+        <div class="text-container">
+          <h1>Najet Ramoul</h1>
+          <div id="lang-buttons"></div>
+          <div class="text-animate">
+            <h3 class="french">Développeuse Full-Stack</h3>
+            <div class="btn-box">
+              <a href="#" id="cv-button" class="btn">CV</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="about-content">
-        <h3>Développeuse Full-Stack</h3>
-        <p>
-          Je suis une développeuse dotée de solides compétences en programmation
-          et conception de logiciels. Avec une expérience de deux ans, ma
-          passion pour les technologies me motive à contribuer activement à des
-          projets innovants. Mon objectif est d'allier mon expertise technique à
-          la créativité afin d'atteindre des résultats probants.
-        </p>
+
+      <!-- Image -->
+      <div class="home-img">
+        <img src="./images/avatar.png" alt="Image" />
       </div>
     </main>
+
+    <!-- Footer -->
     <footer>
       <div class="footer">
         <p>Copyright &copy; 2023 - Najet Ramoul</p>
       </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

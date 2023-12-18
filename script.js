@@ -1,4 +1,5 @@
-// Fonction pour définir le thème en fonction du choix de l'utilisateur
+console.log("Script.js is running on this page");
+// Function to set theme based on user choice
 function setThemeMode(isDarkMode) {
   const toggleIcon = document.querySelector(".toggle-icon");
 
@@ -13,7 +14,7 @@ function setThemeMode(isDarkMode) {
   }
 }
 
-// Fonction pour basculer entre le mode sombre et clair
+// Function to switch between dark and light mode
 function toggleThemeMode() {
   const isDarkMode = document.body.classList.contains("dark-mode");
   setThemeMode(!isDarkMode);
@@ -23,66 +24,136 @@ function toggleThemeMode() {
 const toggleThemeButton = document.querySelector(".toggle-theme");
 toggleThemeButton.addEventListener("click", toggleThemeMode);
 
-// Vérifier si l'utilisateur a déjà choisi un thème
+// Event listener for theme change button
 const storedTheme = localStorage.getItem("theme");
 if (storedTheme) {
   setThemeMode(storedTheme === "dark");
 }
 
-// Enregistrer le choix de l'utilisateur dans le stockage local
+// Save user choice to local storage
 toggleThemeButton.addEventListener("click", () => {
   const isDarkMode = document.body.classList.contains("dark-mode");
   localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+});
+
+//Menu active
+document.addEventListener("DOMContentLoaded", function () {
+  // Récupérer l'URL actuelle
+  let currentUrl = window.location.href;
+
+  // Sélectionner tous les liens du menu
+  let menuLinks = document.querySelectorAll(".menu-link");
+
+  // Parcourir chaque lien et vérifier s'il correspond à l'URL actuelle
+  menuLinks.forEach(function (link) {
+    let linkUrl = link.href;
+
+    // Comparer les parties de chemin de l'URL
+    if (currentUrl.includes(linkUrl)) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
 });
 
 //PDF
 document.addEventListener("DOMContentLoaded", function () {
   const boutonCV = document.getElementById("cv-button");
 
-  boutonCV.addEventListener("click", function () {
-    // Créer un élément de lien pour déclencher le téléchargement
-    const lien = document.createElement("a");
-    lien.href = "./images/cv.pdf"; // Mettez le chemin correct vers votre fichier PDF
-    lien.download = "cv.pdf";
+  if (boutonCV) {
+    boutonCV.addEventListener("click", function () {
+      console.log("Button clicked!");
 
-    // Ajouter le lien au document et déclencher le téléchargement
-    document.body.appendChild(lien);
-    lien.click();
+      const lien = document.createElement("a");
+      lien.href = "./images/cv.pdf";
+      lien.download = "cv.pdf";
 
-    // Supprimer le lien du document
-    document.body.removeChild(lien);
-  });
+      // Ajouter le lien au document et déclencher le téléchargement
+      document.body.appendChild(lien);
+      lien.click();
+
+      // Supprimer le lien du document
+      document.body.removeChild(lien);
+    });
+  } else {
+    console.error("Élément avec l'ID 'cv-button' non trouvé");
+  }
 });
+
 //carousel
-const list = document.querySelector("#list");
-const listContent = Array.from(list.children);
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.querySelector(".skills")) {
+    const list = document.querySelector("#list");
+    const listContent = Array.from(list.children);
 
 listContent.forEach((item) => {
   const duplicatedItem = item.cloneNode(true);
   duplicatedItem.setAttribute("aria-hidden", true);
   list.appendChild(duplicatedItem);
 });
+//changement de langue
+// Fonction pour changer la langue
+function switchLanguage() {
+  let langButton = document.getElementById("langButton");
+  let frenchElements = document.querySelectorAll(".french");
+  let englishElements = document.querySelectorAll(".english");
+
+  // Récupérer la langue actuelle depuis le stockage local
+  let currentLanguage = localStorage.getItem("language") || "fr";
+
+  // Si la langue actuelle est le français, basculez vers l'anglais et vice versa
+  if (currentLanguage === "fr") {
+    langButton.innerHTML = "En";
+
+    frenchElements.forEach(function (element) {
+      element.style.display = "none";
+    });
+
+    englishElements.forEach(function (element) {
+      element.style.display = "block";
+    });
+
+    // Mettre à jour la langue dans le stockage local
+    localStorage.setItem("language", "en");
+  } else {
+    langButton.innerHTML = "Fr";
+
+    frenchElements.forEach(function (element) {
+      element.style.display = "block";
+    });
+
+    englishElements.forEach(function (element) {
+      element.style.display = "none";
+    });
+
+    // Mettre à jour la langue dans le stockage local
+    localStorage.setItem("language", "fr");
+  }
+}
+
+// Appeler la fonction pour initialiser la page avec la langue stockée localement
+switchLanguage();
 
 //Email
 function sendMail() {
   emailjs.init("OLC9XWnhpO7QsE0DA");
 
   // Récupérer les valeurs des champs
-  let sendername = document.querySelector("#sendername").value;
-  let to = document.querySelector("#to").value;
+  let sendername = document.querySelector("#name").value;
+  let to = document.querySelector("#email").value;
   let subject = document.querySelector("#subject").value;
-  let replyto = document.querySelector("#replyto").value;
   let message = document.querySelector("#message").value;
 
   // Vérifier si tous les champs obligatoires sont remplis
-  if (!sendername || !to || !subject || !replyto || !message) {
+  if (!sendername || !to || !subject || !message) {
     alert("Veuillez remplir tous les champs du formulaire.");
     return;
   }
 
   // Vérifier si les champs email sont valides
-  if (!validateEmail(to) || !validateEmail(replyto)) {
-    alert("Veuillez entrer des adresses email valides.");
+  if (!validateEmail(to)) {
+    alert("Veuillez entrer une adresse email valide.");
     return;
   }
 
@@ -95,7 +166,6 @@ function sendMail() {
     sendername: sendername,
     to: to,
     subject: subject,
-    replyto: replyto,
     message: message,
   };
 
@@ -106,10 +176,9 @@ function sendMail() {
       alert("E-mail envoyé avec succès!");
 
       // Effacer les champs du formulaire après l'envoi réussi
-      document.querySelector("#sendername").value = "";
-      document.querySelector("#to").value = "";
+      document.querySelector("#name").value = "";
+      document.querySelector("#email").value = "";
       document.querySelector("#subject").value = "";
-      document.querySelector("#replyto").value = "";
       document.querySelector("#message").value = "";
     })
     .catch((error) => {
@@ -124,23 +193,4 @@ function validateEmail(email) {
   return regex.test(email);
 }
 
-let sections = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll("header nav a");
-
-window.onscroll = () => {
-  sections.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 100;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
-
-    if (top >= offset && top < offset + height) {
-      navLinks.forEach((links) => {
-        links.classList.remove("active");
-        document
-          .querySelector("header nav a[href*=" + id + "]")
-          .classList.add("active");
-      });
-    }
-  });
-};
+///Robot

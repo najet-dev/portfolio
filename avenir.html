@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--box icons-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">N.R</a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <nav class="navbar">
+        <a href="index.html" class="menu-link active" id="accueil-link"
+          >Accueil</a
+        >
+        <a href="about.html" class="menu-link" id="about-link">A propos</a>
+        <a href="skills.html" class="menu-link" id="skills-link">Compétences</a>
+        <a href="project.html" class="menu-link" id="project-link">Projets</a>
+        <a href="contact.html" class="menu-link" id="contact-link">Contact</a>
+        <a href="#" class="toggle-theme">
+          <i class="bx bx-moon toggle-icon"></i>
+        </a>
+        <span class="active-nav"></span>
+      </nav>
+    </header>
+
+    <main class="about" id="about">
+      <div class="avenir">
+        <h2 class="heading">Le projet <span>Avenir</span></h2>
+        <a class="arrow" href="project.html">
+          <i class="bx bx-left-arrow-alt"></i>
+        </a>
+      </div>
+
+      <h3 class="head">Entreprise : Avenir</h3>
+      <h3 class="head">
+        Les technologies : Ionic pour le frontend, NestJS pour le backend et
+        MariaDB comme base de données.
+      </h3>
+      <div class="avenir-img">
+        <img src="images/rappels.png" alt="picture" class="enlarge-image" />
+        <img src="images/password.png" alt="picture" class="enlarge-image" />
+      </div>
+
+      <div class="project">
+        <p>
+          Le projet Avenir représente une initiative mobile visant à cultiver
+          une mentalité positive chez ses utilisateurs. Mon rôle essentiel dans
+          ce projet a été la conception d'un formulaire permettant aux
+          utilisateurs de partager des messages positifs et la mise en place
+          d'une fonctionnalité de rappels quotidiens personnalisables. En
+          permettant aux utilisateurs de programmer des rappels basés sur leurs
+          messages inspirants.
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <p>Copyright &copy; 2023 - Najet Ramoul</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
