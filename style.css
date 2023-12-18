@@ -67,7 +67,9 @@ html {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  transition: 0.3s;
 }
+
 .logo {
   font-size: 2.5rem;
   color: var(--text-color);
@@ -226,15 +228,16 @@ html {
 
 /****************page about***************/
 .about {
-  padding-top: 50px;
+  padding-top: 60px;
 }
 .about h2 {
   font-size: 5rem;
 }
-.contactMe,
+
 .heading {
   text-align: center;
-  margin-top: 110px;
+  margin-top: 80px;
+  margin-bottom: 60px;
 }
 
 span {
@@ -274,11 +277,11 @@ span {
 }
 /******page skills********/
 .skills {
-  padding-top: 50px;
+  padding-top: 60px;
 }
 .skills h2 {
   font-size: 5rem;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 img {
   width: 270px;
@@ -320,10 +323,13 @@ li {
   }
 }
 /*********projects***************/
+.portfolio {
+  margin-top: 60px;
+}
 
-.portfolio h3 {
-  font-size: 30px;
-  margin-bottom: 4rem;
+.portfolio h2 {
+  font-size: 5rem;
+  margin-bottom: 100px;
 }
 .portfolio-container {
   display: grid;
@@ -387,9 +393,11 @@ li {
   grid-template-columns: 1fr;
   gap: 20px;
   min-height: auto;
-  padding-bottom: 7rem;
-  padding-top: 50px;
+  padding-top: 60px;
   text-align: center;
+}
+.contact h2 {
+  font-size: 5rem;
 }
 .contact-content {
   display: grid;
@@ -419,13 +427,8 @@ li {
   margin: 0.5rem 0;
   font-size: 20px;
 }
-.contactMe {
-  font-size: 5rem;
-  margin-bottom: 5rem;
-  text-align: center;
-}
+
 .contact form {
-  max-width: 70rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -479,9 +482,6 @@ li {
 }
 /**************page du projet steamer*****************/
 
-.heading {
-  margin-bottom: 40px;
-}
 .head {
   font-size: 2rem;
   font-weight: 600;
@@ -553,4 +553,62 @@ footer {
   padding: 1rem;
   color: var(--text-color);
   font-size: 15px;
+}
+/*******Breakpoint****************/
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 4%;
+  }
+  main {
+    padding: 10rem 4% 2rem;
+  }
+  .home {
+    padding: 0 4%;
+  }
+  .footer {
+    padding: 2rem 4%;
+  }
+}
+/* Vos styles existants */
+/* ... (votre CSS existant) ... */
+/* ... (votre CSS existant) ... */
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-color);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar a {
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  #menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+
+  #menu-icon.bx-x {
+    color: var(--main-color);
+  }
 }
