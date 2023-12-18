@@ -87,53 +87,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const list = document.querySelector("#list");
     const listContent = Array.from(list.children);
 
-listContent.forEach((item) => {
-  const duplicatedItem = item.cloneNode(true);
-  duplicatedItem.setAttribute("aria-hidden", true);
-  list.appendChild(duplicatedItem);
-});
-//changement de langue
-// Fonction pour changer la langue
-function switchLanguage() {
-  let langButton = document.getElementById("langButton");
-  let frenchElements = document.querySelectorAll(".french");
-  let englishElements = document.querySelectorAll(".english");
-
-  // Récupérer la langue actuelle depuis le stockage local
-  let currentLanguage = localStorage.getItem("language") || "fr";
-
-  // Si la langue actuelle est le français, basculez vers l'anglais et vice versa
-  if (currentLanguage === "fr") {
-    langButton.innerHTML = "En";
-
-    frenchElements.forEach(function (element) {
-      element.style.display = "none";
+    listContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      list.appendChild(duplicatedItem);
     });
-
-    englishElements.forEach(function (element) {
-      element.style.display = "block";
-    });
-
-    // Mettre à jour la langue dans le stockage local
-    localStorage.setItem("language", "en");
-  } else {
-    langButton.innerHTML = "Fr";
-
-    frenchElements.forEach(function (element) {
-      element.style.display = "block";
-    });
-
-    englishElements.forEach(function (element) {
-      element.style.display = "none";
-    });
-
-    // Mettre à jour la langue dans le stockage local
-    localStorage.setItem("language", "fr");
   }
-}
-
-// Appeler la fonction pour initialiser la page avec la langue stockée localement
-switchLanguage();
+});
 
 //Email
 function sendMail() {
@@ -193,4 +153,21 @@ function validateEmail(email) {
   return regex.test(email);
 }
 
-///Robot
+//toggle icon navbar
+const icons = document.getElementById("icons");
+const nav = document.querySelector(".navbar");
+const closeBtn = document.createElement("div");
+closeBtn.className = "close-btn";
+closeBtn.innerHTML = "&times;";
+
+// Function to toggle the menu
+let menuIcon = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
+
+menuIcon.onclick = () => {
+  console.log("Menu Icon Clicked");
+  menuIcon.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
+  console.log("Menu State:", navbar.classList.contains("active"));
+};
+//Robot
