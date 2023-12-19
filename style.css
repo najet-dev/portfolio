@@ -582,12 +582,11 @@ footer {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 4.5rem;
+    top: 6rem;
     left: 0;
     width: 100%;
-    background-color: var(--main-color);
+    background-color: var(--second-bg-color);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    z-index: 1;
   }
 
   .navbar.active {
@@ -596,7 +595,8 @@ footer {
 
   .navbar a {
     font-size: 2rem;
-    margin: 3rem 0;
+    margin: 1.5rem 1.5rem;
+    color: var(--text-color);
   }
 
   #menu-icon {
