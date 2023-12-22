@@ -723,7 +723,16 @@ footer {
     padding: 10px;
   }
   /******page steamer*************/
+
+  .heading {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: -100px;
+  }
+  .arrow {
+    padding-top: 60px;
+  }
   .project p {
-    padding: 0 5px;
+    padding: 0 10px;
   }
 }
