@@ -170,4 +170,43 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
   console.log("Menu State:", navbar.classList.contains("active"));
 };
+
+//changer de langue
+let isFrench = true; // Variable pour suivre la langue actuelle
+
+// Fonction pour changer la langue
+function changeLanguage() {
+  const langButtonsContainer = document.getElementById("lang-buttons");
+  const jobTitle = document.getElementById("job-title");
+  const home = document.getElementById("home-link");
+  const about = document.getElementById("about-link");
+  const skills = document.getElementById("skills-link");
+  const project = document.getElementById("project-link");
+  const contact = document.getElementById("contact-link");
+
+  // Bascule entre le français et l'anglais
+  if (isFrench) {
+    jobTitle.textContent = "Full-Stack Developer";
+    home.textContent = "Home";
+    about.textContent = "About";
+    skills.textContent = "Skills";
+    project.textContent = "project";
+    contact.textContent = "Contact";
+    langButtonsContainer.innerHTML =
+      "<button onclick='changeLanguage()'>Changer la langue</button>";
+  } else {
+    jobTitle.textContent = "Développeuse Full-Stack";
+    home.textContent = "Accueil";
+    about.textContent = "A propos";
+    skills.textContent = "Compétences";
+    project.textContent = "projects";
+    contact.textContent = "Contact";
+    langButtonsContainer.innerHTML =
+      "<button onclick='changeLanguage()'>Change Language</button>";
+  }
+
+  // Inverse la valeur de la variable
+  isFrench = !isFrench;
+}
+
 //Robot
