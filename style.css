@@ -232,11 +232,13 @@ html {
 .about h2 {
   font-size: 5rem;
 }
-
 .heading {
   text-align: center;
   margin-top: 80px;
   margin-bottom: 60px;
+}
+span.pink-text {
+  color: var(--main-color);
 }
 
 span {
@@ -275,10 +277,10 @@ span {
   background: var(--second-bg-color);
 }
 /******page skills********/
-.skills {
+.skill {
   padding-top: 60px;
 }
-.skills h2 {
+.skill h2 {
   font-size: 5rem;
   margin-bottom: 100px;
 }
@@ -307,7 +309,6 @@ ul {
 li {
   padding: 10px 20px;
 }
-
 #container[data-animated] {
   overflow: hidden;
 }
@@ -315,7 +316,6 @@ li {
   width: max-content;
   animation: scroll 20s linear infinite;
 }
-
 @keyframes scroll {
   to {
     transform: translateX(calc(-50% - 5px));
@@ -403,30 +403,25 @@ li {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-
 .contact-info,
 .contact-form {
   width: calc(95% - 10px);
   text-align: center;
   padding: 1rem;
 }
-
 .contact-info-item {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
-
 .contact-info-item i {
   margin-right: 0.5rem;
   font-size: 24px;
 }
-
 .contact-info p {
   margin: 0.5rem 0;
   font-size: 20px;
 }
-
 .contact form {
   margin: 0 auto;
   text-align: center;
@@ -492,7 +487,6 @@ li {
   align-items: center;
   margin-bottom: 20px;
 }
-
 .steamer-image img {
   max-width: 130px;
   height: auto;
@@ -510,7 +504,6 @@ li {
   text-align: justify;
 }
 /****************project avenir*********************/
-
 .arrow {
   display: flex;
   justify-content: center;
@@ -531,7 +524,6 @@ li {
   align-items: center;
   margin-bottom: 20px;
 }
-
 .avenir-img img {
   max-width: 180px;
   height: auto;
@@ -543,7 +535,6 @@ li {
   max-width: none;
   height: auto;
 }
-
 /*************************footer*******************/
 footer {
   grid-row: 3 / 4;
@@ -566,7 +557,6 @@ footer {
     text-align: justify;
   }
 }
-
 @media (min-width: 992px) and (max-width: 1199px) {
   html {
     font-size: 55%;
@@ -594,22 +584,18 @@ footer {
     display: flex;
   }
   /******page steamer*************/
-
   .heading {
     margin-top: 40px;
     margin-bottom: -30px;
   }
-
   .arrow {
     padding-top: 60px;
   }
-
   .project p {
     margin: 0 20px;
     text-align: justify;
   }
 }
-
 @media (min-width: 768px) and (max-width: 991px) {
   main {
     padding: 10rem 4% 2rem;
@@ -625,23 +611,19 @@ footer {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
-
   .navbar.active {
     display: flex;
   }
-
   .navbar a {
     font-size: 2rem;
     margin: 1.5rem 2.5rem;
   }
-
   #menu-icon {
     display: block;
     cursor: pointer;
     font-size: 2rem;
     color: var(--text-color);
   }
-
   #menu-icon.bx-x {
     font-size: 3rem;
     color: var(--text-color);
@@ -666,7 +648,6 @@ footer {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
-
   .contact-info,
   .contact-form {
     width: calc(95% - 10px);
@@ -674,29 +655,24 @@ footer {
     padding: 1rem;
     margin: 0 auto;
   }
-
   .contact-info-item {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
   }
   /******page steamer*************/
-
   .heading {
     margin-top: 50px;
     margin-bottom: -50px;
   }
-
   .arrow {
     padding-top: 70px;
   }
-
   .project p {
     padding: 0 15px;
     text-align: justify;
   }
 }
-
 @media (max-width: 767px) {
   .navbar {
     display: none;
@@ -709,23 +685,19 @@ footer {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
-
   .navbar.active {
     display: flex;
   }
-
   .navbar a {
     font-size: 2rem;
     margin: 1.5rem 2.5rem;
   }
-
   #menu-icon {
     display: block;
     cursor: pointer;
     font-size: 2rem;
     color: var(--text-color);
   }
-
   #menu-icon.bx-x {
     font-size: 3rem;
     color: var(--text-color);
@@ -737,22 +709,18 @@ footer {
     background-color: var(--bg-color);
     text-align: center;
   }
-
   .home .home-content {
     order: 2;
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
-
   .home .home-img {
     order: 1;
     margin-bottom: 35rem;
   }
-
   .home-content h1 {
     margin-top: -50rem;
   }
-
   .text-container h3 {
     margin-top: -0.5rem;
   }
@@ -760,16 +728,13 @@ footer {
   .about {
     text-align: center;
   }
-
   .about h2 {
     margin-bottom: -2rem;
   }
-
   .about .about-img {
     order: 1;
     margin-bottom: 1rem;
   }
-
   .about-content p {
     font-size: 2.2rem;
     margin: 2rem 0 3rem;
@@ -779,26 +744,21 @@ footer {
     text-align: justify;
   }
   /***************page project************/
-
   .portfolio {
     text-align: center;
   }
-
   .portfolio h2 {
     margin-bottom: 2rem;
   }
-
   .portfolio-container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .portfolio-box {
     width: 100%;
     margin-bottom: 1rem;
   }
-
   /******************page contact****************/
   .contact-content {
     text-align: center;
@@ -806,7 +766,6 @@ footer {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
-
   .contact-info,
   .contact-form {
     width: calc(95% - 10px);
@@ -814,7 +773,6 @@ footer {
     padding: 1rem;
     margin: 0 auto;
   }
-
   .contact-info-item {
     display: flex;
     align-items: center;
@@ -826,14 +784,12 @@ footer {
     height: 270px;
     margin: 15px;
   }
-
   #container {
     width: 93vw;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -841,12 +797,10 @@ footer {
     list-style: none;
     justify-content: center;
   }
-
   li {
     padding: 10px;
   }
   /******page steamer*************/
-
   .heading {
     text-align: center;
     margin-top: 80px;

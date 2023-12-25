@@ -14,10 +14,13 @@
   </head>
   <body>
     <header class="header">
+      <div id="lang-buttons">
+        <button onclick="changeLanguage()">Change Language</button>
+      </div>
       <a href="index.html" class="logo">N.R</a>
       <div class="bx bx-menu" id="menu-icon"></div>
       <nav class="navbar">
-        <a href="index.html" class="menu-link" id="accueil-link">Accueil</a>
+        <a href="index.html" class="menu-link" id="home-link">Accueil</a>
         <a href="about.html" class="menu-link" id="about-link">A propos</a>
         <a href="skills.html" class="menu-link" id="skills-link">Compétences</a>
         <a href="project.html" class="menu-link" id="project-link">Projets</a>
@@ -28,8 +31,8 @@
         <span class="active-nav"></span>
       </nav>
     </header>
-    <main class="skills">
-      <h2 class="heading">Mes <span>Compétences</span></h2>
+    <main class="skill">
+      <h2 id="skillsTitle" class="heading">Mes <span>Compétences</span></h2>
       <div id="container" data-animated>
         <ul id="list">
           <li><img src="images/java.png" alt="java image" /></li>

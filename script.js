@@ -170,43 +170,109 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
   console.log("Menu State:", navbar.classList.contains("active"));
 };
+//change language
+let isFrench = localStorage.getItem("language") === "fr";
 
-//changer de langue
-let isFrench = true; // Variable pour suivre la langue actuelle
-
-// Fonction pour changer la langue
 function changeLanguage() {
-  const langButtonsContainer = document.getElementById("lang-buttons");
-  const jobTitle = document.getElementById("job-title");
-  const home = document.getElementById("home-link");
-  const about = document.getElementById("about-link");
-  const skills = document.getElementById("skills-link");
-  const project = document.getElementById("project-link");
-  const contact = document.getElementById("contact-link");
-
-  // Bascule entre le français et l'anglais
-  if (isFrench) {
-    jobTitle.textContent = "Full-Stack Developer";
-    home.textContent = "Home";
-    about.textContent = "About";
-    skills.textContent = "Skills";
-    project.textContent = "project";
-    contact.textContent = "Contact";
-    langButtonsContainer.innerHTML =
-      "<button onclick='changeLanguage()'>Changer la langue</button>";
-  } else {
-    jobTitle.textContent = "Développeuse Full-Stack";
-    home.textContent = "Accueil";
-    about.textContent = "A propos";
-    skills.textContent = "Compétences";
-    project.textContent = "projects";
-    contact.textContent = "Contact";
-    langButtonsContainer.innerHTML =
-      "<button onclick='changeLanguage()'>Change Language</button>";
-  }
-
-  // Inverse la valeur de la variable
   isFrench = !isFrench;
+  localStorage.setItem("language", isFrench ? "fr" : "en");
+  updateLanguage();
+
+  const langButton = document.getElementById("lang-button");
+  if (langButton) {
+    langButton.textContent = isFrench ? "EN" : "FR";
+  }
 }
+function updateLanguage() {
+  const elements = {
+    home: document.getElementById("home-link"),
+    about: document.getElementById("about-link"),
+    skills: document.getElementById("skills-link"),
+    project: document.getElementById("project-link"),
+    contact: document.getElementById("contact-link"),
+    jobTitle: document.getElementById("job-title"),
+    aboutMe: document.getElementById("aboutMe"),
+    aboutContentText: document.getElementById("about-content-text"),
+    skillsTitle: document.getElementById("skillsTitle"),
+    projectTitle: document.getElementById("projectTitle"),
+    projectSteamer: document.getElementById("projectSteamer"),
+    business: document.getElementById("business"),
+    techno: document.getElementById("techno"),
+    projetOne: document.getElementById("projetOne"),
+    projectAvenir: document.getElementById("projectAvenir"),
+    avenir: document.getElementById("avenir"),
+    technos: document.getElementById("technos"),
+    projectTwo: document.getElementById("projectTwo"),
+    langButton: document.getElementById("lang-button"),
+    contactMe: document.getElementById("contactMe"),
+  };
+  const texts = {
+    fr: {
+      home: "Accueil",
+      about: "À propos",
+      skills: "Compétences",
+      project: "Projets",
+      contact: "Contact",
+      jobTitle: "Développeuse Full-Stack",
+      aboutMe: "A propos de <span class='pink-text'>Moi</span> !",
+      aboutContentText:
+        "Je suis une développeuse dotée de solides compétences en programmation et conception de logiciels. Avec une expérience de deux ans, ma passion pour les technologies me motive à contribuer activement à des projets innovants. Mon objectif est d'allier mon expertise technique à la créativité afin d'atteindre des résultats probants.",
+      langButton: "Changer la langue",
+      skillsTitle: "Mes <span class='pink-text'>Compétences</span>",
+      projectTitle: "Mes <span class='pink-text'>Projets</span>",
+      projectSteamer: "Le projet<span class='pink-text'> Steamer</span>",
+      business: "Entreprise : Mithra production",
+      techno:
+        " Les technologies : Ionic pour le frontend, NestJS pour le backend et MariaDB comme base de données.",
+      projetOne:
+        "Dans le cadre du projet Steamer, j'ai développé l'affichage de l'avatar et du pseudo Steamer, ainsi que la page de profil avec des badges pour les nouveaux likes et matchs. J'ai également créé les tables 'swipe' et 'match' pour enregistrer les interactions entreutilisateurs, incluant la suppression automatique des dislikes après 30 jours.",
+      projetAvenir: "Le projet<span class='pink-text'> Avenir</span>",
+      avenir: "Entreprise : Avenir",
+      technos:
+        " Les technologies : Ionic pour le frontend, NestJS pour le backend et MariaDB comme base de données.",
+      projetTwo:
+        "Le projet Avenir représente une initiative mobile visant à cultive une mentalité positive chez ses utilisateurs. Mon rôle essentiel dans ce projet a été la conception d'un formulaire permettant aux utilisateurs de partager des messages positifs et la mise en place d'une fonctionnalité de rappels quotidiens personnalisables. En permettant aux utilisateurs de programmer des rappels basés sur leurs messages inspirants.",
+      contactMe: "Contactez-<span class='pink-text'>Moi</span> !",
+    },
+    en: {
+      home: "Home",
+      about: "About",
+      skills: "Skills",
+      project: "Projects",
+      contact: "Contact",
+      jobTitle: "Full-Stack Developer",
+      aboutMe: "About  <span class='pink-text'>Me</span>",
+      aboutContentText:
+        "I am a developer with strong programming skills and software design. With two years of experience, ma passion for technologies motivates me to actively contribute to innovative projects. My goal is to combine my technical expertise with creativity in order to achieve convincing results.",
+      langButton: "Change Language",
+      skillsTitle: "My <span class='pink-text'>skills</span>",
+      projectTitle: "My  <span class='pink-text'>Projects<span>",
+      projectSteamer: "The <span class='pink-text'>steamer</span> project",
+      business: "Company : Mithra production",
+      techno:
+        "The technologies : Ionic for the frontend, NestJS for the backend and  MariaDB for the database.",
+      projetOne:
+        "As part of the Steamer project, I developed the display of  the Steamer avatar and nickname, as well as the profile page with badges for new likes and matches. I also created the 'swipe' and 'match' tables to record interactions between including automatic deletion of dislikes after 30 days.",
+      projectAvenir: "The <span class='pink-text'> avenir</span> project",
+      avenir: "Company : Avenir",
+      technos:
+        "The technologies : Ionic for the frontend, NestJS for the backend and  MariaDB for the database.",
+      projectTwo:
+        "The Avenir project represents a mobile initiative aimed at cultivating a positive mentality among its users. My key role in this project was the design of a form allowing users to share positive messages, and the implementation of a customizable daily reminder feature. At allowing users to set reminders based on their inspirational inspirational messages.",
+
+      contactMe: "Contact <span class='pink-text'>Me</span>!",
+    },
+  };
+
+  for (const key in elements) {
+    const element = elements[key];
+    if (element && texts[isFrench ? "fr" : "en"][key]) {
+      // Ajoutez une classe à la balise span pour cibler avec le CSS
+      element.innerHTML = texts[isFrench ? "fr" : "en"][key];
+    }
+  }
+}
+
+updateLanguage();
 
 //Robot
