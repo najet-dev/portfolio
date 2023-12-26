@@ -13,12 +13,6 @@
   </head>
   <body>
     <header class="header">
-      <div id="lang-buttons">
-        <button onclick="changeLanguage()" id="lang-button">
-          <span id="lang-text">FR</span>
-        </button>
-      </div>
-
       <a href="index.html" class="logo">N.R</a>
       <div class="bx bx-menu" id="menu-icon"></div>
       <nav class="navbar">
@@ -40,9 +34,12 @@
         <div class="text-container">
           <h1 id="main-heading">Najet Ramoul</h1>
           <div class="text-animate">
-            <h3 id="job-title">Développeuse Full-Stack</h3>
+            <h3 id="job-title"></h3>
             <div class="btn-box">
               <a href="#" id="cv-button" class="btn">CV</a>
+              <button class="btn" onclick="changeLanguage()" id="lang-button">
+                FR
+              </button>
             </div>
           </div>
         </div>
