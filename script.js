@@ -38,17 +38,17 @@ toggleThemeButton.addEventListener("click", () => {
 
 //Menu active
 document.addEventListener("DOMContentLoaded", function () {
-  // Récupérer l'URL actuelle
+  // Retrieve current URL
   let currentUrl = window.location.href;
 
-  // Sélectionner tous les liens du menu
+  // Select all menu links
   let menuLinks = document.querySelectorAll(".menu-link");
 
-  // Parcourir chaque lien et vérifier s'il correspond à l'URL actuelle
+  // Browse each link and check if it matches the current URL
   menuLinks.forEach(function (link) {
     let linkUrl = link.href;
 
-    // Comparer les parties de chemin de l'URL
+    // Compare URL path parts
     if (currentUrl.includes(linkUrl)) {
       link.classList.add("active");
     } else {
@@ -68,19 +68,16 @@ document.addEventListener("DOMContentLoaded", function () {
       const lien = document.createElement("a");
       lien.href = "./images/cv.pdf";
       lien.download = "cv.pdf";
-
-      // Ajouter le lien au document et déclencher le téléchargement
+      // Add the link to the document and trigger the download
       document.body.appendChild(lien);
       lien.click();
-
-      // Supprimer le lien du document
+      // Delete document link
       document.body.removeChild(lien);
     });
   } else {
     console.error("Élément avec l'ID 'cv-button' non trouvé");
   }
 });
-
 //carousel
 document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".skills")) {
@@ -94,48 +91,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
 //Email
 function sendMail() {
   emailjs.init("OLC9XWnhpO7QsE0DA");
 
-  // Récupérer les valeurs des champs
+  // Retrieve field values
   let sendername = document.querySelector("#name").value;
   let to = document.querySelector("#email").value;
   let subject = document.querySelector("#subject").value;
   let message = document.querySelector("#message").value;
 
-  // Vérifier si tous les champs obligatoires sont remplis
+  // Check that all required fields have been completed
   if (!sendername || !to || !subject || !message) {
     alert("Veuillez remplir tous les champs du formulaire.");
     return;
   }
-
-  // Vérifier si les champs email sont valides
+  // Check that email fields are valid
   if (!validateEmail(to)) {
     alert("Veuillez entrer une adresse email valide.");
     return;
   }
-
-  // ID du service et du modèle EmailJS
+  // EmailJS service and template ID
   let serviceID = "service_1gjwsyn";
   let templateID = "template_88cm4wa";
 
-  // Paramètres pour l'envoi
+  // Sending parameters
   let params = {
     sendername: sendername,
     to: to,
     subject: subject,
     message: message,
   };
-
-  // Envoyer l'e-mail
+  // Send e-mail
   emailjs
     .send(serviceID, templateID, params)
     .then((res) => {
       alert("E-mail envoyé avec succès!");
 
-      // Effacer les champs du formulaire après l'envoi réussi
+      // Clear form fields after successful submission
       document.querySelector("#name").value = "";
       document.querySelector("#email").value = "";
       document.querySelector("#subject").value = "";
@@ -146,9 +139,9 @@ function sendMail() {
     });
 }
 
-// Fonction pour valider une adresse email
+// Function to validate an email address
 function validateEmail(email) {
-  // Utilisez une expression régulière pour valider l'adresse email
+  // Use a regular expression to validate the email address
   let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
@@ -171,7 +164,7 @@ menuIcon.onclick = () => {
   console.log("Menu State:", navbar.classList.contains("active"));
 };
 //change language
-// Utiliser "fr" par défaut si la langue n'est pas définie dans le local storage
+// Use "fr" by default if language is not defined in local storage
 let isFrench =
   localStorage.getItem("language") === "fr" ||
   localStorage.getItem("language") === null;
@@ -234,7 +227,7 @@ const texts = {
     technos:
       "The technologies : Ionic for the frontend, NestJS for the backend and  MariaDB for the database.",
     projectTwo:
-      "The Avenir project represents a mobile initiative aimed at cultivating a positive mentality among its users. My key role in this project was the design of a form allowing users to share positive messages, and the implementation of a customizable daily reminder feature. At allowing users to set reminders based on their inspirational inspirational messages.",
+      "<p>The Avenir project represents a mobile initiative aimed at cultivating a positive mentality among its users. My key role in this project was the design of a form allowing users to share positive messages, and the implementation of a customizable daily reminder feature. At allowing users to set reminders based on their inspirational inspirational messages.</p>",
     contactMe: "Contact <span class='pink-text'>Me</span>!",
     placeholders: {
       name: "Name",
@@ -246,7 +239,7 @@ const texts = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Mettez à jour le texte du bouton lors du chargement de la page
+  // Update button text when page loads
   const langButton = document.getElementById("lang-button");
   if (langButton) {
     langButton.textContent = isFrench ? "FR" : "EN";
@@ -308,7 +301,7 @@ function updateLanguage() {
 
 updateLanguage();
 
-// Appel initial pour mettre à jour les placeholders lors du chargement de la page
+// Initial call to update placeholders on page load
 function updateFormPlaceholders() {
   const placeholders = texts[isFrench ? "fr" : "en"].placeholders;
 
@@ -321,8 +314,27 @@ function updateFormPlaceholders() {
     }
   }
 }
-
-// Appel initial pour mettre à jour les placeholders lors du chargement de la page
 updateFormPlaceholders();
 
-//Robot
+function enlargeImage(event) {
+  let image = event.target;
+
+  // View larger image
+  let enlargedContainer = document.getElementById("enlargedContainer");
+  let enlargedImage = document.getElementById("enlargedImage");
+  enlargedImage.src = image.src; // Définir la source de l'image agrandie
+  enlargedContainer.style.display = "flex";
+}
+
+function closeEnlarged() {
+  // Hide larger image
+  let enlargedContainer = document.getElementById("enlargedContainer");
+  enlargedContainer.style.display = "none";
+}
+// Select all images in the "image" class
+let images = document.querySelectorAll(".image img");
+
+// Add an event listener to each image
+images.forEach(function (image) {
+  image.addEventListener("click", enlargeImage);
+});
