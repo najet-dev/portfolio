@@ -176,7 +176,7 @@ const texts = {
     skills: "Compétences",
     project: "Projets",
     contact: "Contact",
-    jobTitle: "Développeuse Full-Stack",
+    jobTitle: "<h3>Développeuse Full-Stack</h3>",
     aboutMe: "A propos de <span class='pink-text'>Moi</span> !",
     aboutContentText:
       "Je suis une développeuse dotée de solides compétences en programmation et conception de logiciels. Avec une expérience de deux ans, ma passion pour les technologies me motive à contribuer activement à des projets innovants. Mon objectif est d'allier mon expertise technique à la créativité afin d'atteindre des résultats probants.",
@@ -209,7 +209,7 @@ const texts = {
     skills: "Skills",
     project: "Projects",
     contact: "Contact",
-    jobTitle: "Full-Stack Developer",
+    jobTitle: "<h3>Full-Stack Developer</h3>",
     aboutMe: "About  <span class='pink-text'>Me</span>",
     aboutContentText:
       "I am a developer with strong programming skills and software design. With two years of experience, ma passion for technologies motivates me to actively contribute to innovative projects. My goal is to combine my technical expertise with creativity in order to achieve convincing results.",
