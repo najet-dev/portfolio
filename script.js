@@ -217,15 +217,15 @@ const texts = {
     skillsTitle: "My <span class='pink-text'>skills</span>",
     projectTitle: "My  <span class='pink-text'>Projects<span>",
     projectSteamer: "The <span class='pink-text'>steamer</span> project",
-    business: "Company : Mithra production",
+    business: "<h3>Company : Mithra production</h3>",
     techno:
-      "The technologies : Ionic for the frontend, NestJS for the backend and  MariaDB for the database.",
+      "<h3>The technologies : Ionic for the frontend, NestJS for the backend and  MariaDB for the database.</h3>",
     projetOne:
       "<p>As part of the Steamer project, I developed the display of  the Steamer avatar and nickname, as well as the profile page with badges for new likes and matches. I also created the 'swipe' and 'match' tables to record interactions between including automatic deletion of dislikes after 30 days.</p>",
     projectAvenir: "The <span class='pink-text'> avenir</span> project",
-    avenir: "Company : Avenir",
+    avenir: "<h3>Company : Avenir<h3>",
     technos:
-      "The technologies : Ionic for the frontend, NestJS for the backend and  MariaDB for the database.",
+      "<h3>The technologies : Ionic for the frontend, NestJS for the backend and  MariaDB for the database.</h3>",
     projectTwo:
       "<p>The Avenir project represents a mobile initiative aimed at cultivating a positive mentality among its users. My key role in this project was the design of a form allowing users to share positive messages, and the implementation of a customizable daily reminder feature. At allowing users to set reminders based on their inspirational inspirational messages.</p>",
     contactMe: "Contact <span class='pink-text'>Me</span>!",
