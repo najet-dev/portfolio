@@ -305,7 +305,6 @@ li {
 .portfolio-box:hover .portfolio-info {
   opacity: 1; 
   background: rgba(0, 0, 0, 0.8); 
-
 }
 .portfolio-box .portfolio-info a {
   color: white;
