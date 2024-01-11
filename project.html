@@ -10,49 +10,50 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script src="path/to/justify-text.js"></script>
+
   </head>
   <body>
     <header class="header">
-      <a href="index.html" class="logo">N.R</a>
-      <div class="bx bx-menu" id="menu-icon"></div>
+      <a href="index.html"
+      ><img class="logo" src="images/logo.png" alt="picture" />
+    </a>      <div class="bx bx-menu" id="menu-icon"></div>
       <nav class="navbar">
-        <a href="index.html" class="active">Accueil</a>
-        <a href="about.html">A propos</a>
-        <a href="skills.html">Compétences</a>
-        <a href="project.html">Projets</a>
-        <a href="contact.html">Contact</a>
-        <a href="#" class="toggle-theme"
-          ><i class="bx bx-moon toggle-icon"></i
-        ></a>
+        <a href="index.html" class="menu-link" id="home-link">Accueil</a>
+        <a href="about.html" class="menu-link" id="about-link">A propos</a>
+        <a href="skills.html" class="menu-link" id="skills-link">Compétences</a>
+        <a href="project.html" class="menu-link" id="project-link">Projets</a>
+        <a href="contact.html" class="menu-link" id="contact-link">Contact</a>
+        <a href="#" class="toggle-theme">
+          <i class="bx bx-moon toggle-icon"></i>
+        </a>
+        <span class="active-nav"></span>
       </nav>
     </header>
     <main class="about" id="about">
       <section class="portfolio">
-        <h2 class="heading">Mes <span>projets</span></h2>
+        <h2 class="heading" id="projectTitle">Mes <span>projets</span></h2>
         <div class="portfolio-container">
           <div class="portfolio-box">
-            <img src="images/learninigCenter.jpg" alt="" />
+            <img src="images/project.jpg" alt="" />
             <div class="portfolio-info">
-              <h3>La boîte à outils Novatris</h3>
-
-              <a href="https://www.outils-pedagogie.novatris.uha.fr/"
-                ><i class="bx bx-link"></i
-              ></a>
+              <p id="descriptionToolbox"></p>
+              <a class="learnMore" href="toolbox.html"></a>
             </div>
           </div>
-
+          
           <div class="portfolio-box">
             <img src="images/angular.png" alt="" />
             <div class="portfolio-info">
-              <h3>Steamer</h3>
-              <a href="steamer.html"><i class="bx bx-link"></i></a>
+              <p id="descriptionSteamer"></p>
+              <a class="learnMore" href="steamer.html"></a>
             </div>
           </div>
           <div class="portfolio-box">
             <img src="images/bootstrap.jpg" alt="" />
             <div class="portfolio-info">
               <h3>Avenir</h3>
-              <a href="avenir.html"><i class="bx bx-link"></i></a>
+              <a class="learnMore" href="avenir.html"></a>
             </div>
           </div>  
       </section>

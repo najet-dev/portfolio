@@ -13,35 +13,31 @@
   </head>
   <body>
     <header class="header">
-      <a href="index.html" class="logo">N.R</a>
+      <a href="index.html"
+        ><img class="logo" src="images/logo.png" alt="picture" />
+      </a>
       <div class="bx bx-menu" id="menu-icon"></div>
       <nav class="navbar">
-        <a href="index.html" class="active">Accueil</a>
-        <a href="about.html">A propos</a>
-        <a href="skills.html">Compétences</a>
-        <a href="project.html">Projets</a>
-        <a href="contact.html">Contact</a>
-        <a href="#" class="toggle-theme"
-          ><i class="bx bx-moon toggle-icon"></i
-        ></a>
+        <a href="index.html" class="menu-link" id="home-link">Accueil</a>
+        <a href="about.html" class="menu-link" id="about-link">A propos</a>
+        <a href="skills.html" class="menu-link" id="skills-link">Compétences</a>
+        <a href="project.html" class="menu-link" id="project-link">Projets</a>
+        <a href="contact.html" class="menu-link" id="contact-link">Contact</a>
+        <a href="#" class="toggle-theme">
+          <i class="bx bx-moon toggle-icon"></i>
+        </a>
+        <span class="active-nav"></span>
       </nav>
     </header>
-
     <main class="about" id="about">
-      <h2 class="heading">Apropos de <span>Moi</span></h2>
+      <h2 class="heading" id="aboutMe">A propos de <span>Moi</span></h2>
 
       <div class="about-img">
-        <img src="images/najet.png" alt="picture" />
+        <img src="images/avatar.png" alt="picture" />
       </div>
       <div class="about-content">
-        <h3>Développeuse Full-Stack</h3>
-        <p>
-          Je suis une développeuse dotée de solides compétences en programmation
-          et conception de logiciels. Avec une expérience de deux ans, ma
-          passion pour les technologies me motive à contribuer activement à des
-          projets innovants. Mon objectif est d'allier mon expertise technique à
-          la créativité afin d'atteindre des résultats probants.
-        </p>
+        <h3 id="job-title">Développeuse Full-Stack</h3>
+        <p id="about-content-text"></p>
       </div>
     </main>
     <footer>
