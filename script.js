@@ -186,24 +186,22 @@ const texts = {
     learnMore: "En savoir plus",
     descriptionToolbox:"<p>Plateforme web pour enseignants, propose idées et outils pédagogiques pour des cours interactifs et personnalisés.</p>",
     descriptionSteamer:"<p>Application de rencontres synchronisée avec STEAM, mettant en relation des utilisateurs en fonction de leurs jeux communs au cours des 15 derniers jours.</p>",
+    descriptionAvenir:"<p>L'application mobile permet aux utilisateurs de rédiger des messages positifs et de planifier des rappels quotidiens basés sur ces messages.</p>",
     projectSteamer: "<span class='pink-text'> Steamer</span>",
     business: "<strong>Entreprise</strong> : Mithra production",
     techno:
       " <strong>Les technologies</strong> : Ionic pour le frontend, NestJS pour le backend et MariaDB comme base de données.",
     projectOne:
-      "<p>Dans le cadre du projet Steamer, j'ai développé l'affichage de l'avatar et du pseudo Steamer, ainsi que la page de profil avec des badges pour les nouveaux likes et matchs. J'ai également créé les tables 'swipe' et 'match' pour enregistrer les interactions entre utilisateurs, incluant la suppression automatique des dislikes après 30 jours.</p>",
+      "<p>Dans ce projet, j'ai conçu la page de profil et créé la page 'favorites' avec des badges pour les nouveaux likes et matchs. J'ai aussi géré l'enregistrement des informations sur les likes, dislikes, et les matchs entre utilisateurs, incluant une suppression automatique des dislikes après 30 jours.</p>",
     projectAvenir: "<span class='pink-text'> Avenir</span>",
     avenir: "<strong>Entreprise</strong> : Avenir",
     technos:
       " <strong>Les technologies</strong> : Ionic pour le frontend, NestJS pour le backend et MariaDB comme base de données.",
-    projetTwo:
-      "Le projet Avenir représente une initiative mobile visant à cultive une mentalité positive chez ses utilisateurs. Mon rôle essentiel dans ce projet a été la conception d'un formulaire permettant aux utilisateurs de partager des messages positifs et la mise en place d'une fonctionnalité de rappels quotidiens personnalisables. En permettant aux utilisateurs de programmer des rappels basés sur leurs messages inspirants.",
+    projectTwo:"<p>Mon rôle dans ce projet consistait à concevoir un formulaire permettant aux utilisateurs d'ajouter des messages positifs, tout en mettant en place une fonctionnalité de rappels quotidiens personnalisables. Cette option permettait aux utilisateurs de programmer des rappels en fonction de leurs propres messages inspirants.</p>",
     projectToolbox: "<span class='pink-text'> La boîte à Outils</span>",
     toolbox: "<strong>Entreprise</strong> : Université de Haute Alsace",
-    technoToolbox:
-      "<strong>Les technologies</strong> : JavaScript pour le frontend, PHP et WordPress pour le backend et MySql comme base de données.",
-    projectBox:
-    "<p>En tant que développeuse unique du projet 'La Boîte à Outils', j'ai effectué la migration des fonctionnalités vers un plugin. Cela a impliqué le transfert et la refonte complète d'aspects essentiels tels que l'affichage des outils pédagogiques, la gestion du panier et la sauvegarde des sélections. Mon objectif principal était d'optimiser le code pour une meilleure performance et d'améliorer l'expérience utilisateur du site. Pour découvrir le résultat final, veuillez cliquer sur le bouton ci-dessous.</p>",
+    technoToolbox:"<strong>Les technologies</strong> : JavaScript pour le frontend, PHP et WordPress pour le backend et MySQL comme base de données.",
+    projectBox: "<p>En tant que développeuse unique du projet 'La Boîte à Outils', j'ai effectué la migration des fonctionnalités vers un plugin. Cela a impliqué le transfert et la refonte complète d'aspects essentiels tels que l'affichage des outils pédagogiques, la gestion du panier et la sauvegarde des sélections. Mon objectif principal était d'optimiser le code pour une meilleure performance et d'améliorer l'expérience utilisateur du site. Pour découvrir le résultat final, veuillez cliquer sur le bouton ci-dessous.</p>",
     contactMe: "Contactez-<span class='pink-text'>Moi</span> !",
     placeholders: {
       name: "Nom",
@@ -228,19 +226,20 @@ const texts = {
     learnMore: "Learn more",
     descriptionToolbox: "<p>Web platform for teachers, offers ideas and educational tools for interactive and personalized courses.</p>",
     descriptionSteamer: "<p>Dating application synchronized with STEAM, connecting users based on their shared games over the past 15 days.</p>",
-    projectSteamer: "The <span class='pink-text'>steamer</span>",
+    descriptionAvenir:"<p>The mobile app allows users to write positive messages and schedule daily reminders based on these messages.</p>",
+    projectSteamer: "<span class='pink-text'>Steamer</span>",
     business: "<strong>Company</strong> : Mithra production",
     techno:
       "<strong>The technologies</strong> : Ionic for the frontend, NestJS for the backend and  MariaDB for the database.",
     projectOne:
-      "<p>As part of the Steamer project, I developed the display of  the Steamer avatar and nickname, as well as the profile page with badges for new likes and matches. I also created the 'swipe' and 'match' tables to record interactions between including automatic deletion of dislikes after 30 days.</p>",
-    projectAvenir: "The <span class='pink-text'> avenir</span>",
+      "<p>In this project, I designed the profile page and created the 'favorites' page with badges for new likes and matches. I also managed the recording of information on likes, dislikes, and matches between users, including automatic deletion of dislikes after 30 days.</p>",
+    projectAvenir: "<span class='pink-text'> Avenir</span>",
     avenir: "<strong>Company</strong> : Avenir",
     technos:
       "<strong>The technologies</strong> : Ionic for the frontend, NestJS for the backend and  MariaDB for the database.",
     projectTwo:
-      "<p>The Avenir project represents a mobile initiative aimed at cultivating a positive mentality among its users. My key role in this project was the design of a form allowing users to share positive messages, and the implementation of a customizable daily reminder feature. At allowing users to set reminders based on their inspirational inspirational messages.</p>",
-    projectToolbox: "The <span class='pink-text'> La boîte à Outils</span>",
+      "<p>My role in this project was to design a form allowing users to add positive messages, while implementing a customizable daily reminders functionality. This option allowed users to schedule reminders based on their own inspirational messages.</p>",
+    projectToolbox: "<span class='pink-text'> La boîte à Outils</span>",
     toolbox: "<strong>Company</strong> : Université de Haute Alsace",
     technoToolbox:
     "<strong>The technologies</strong> : JavaScript for the frontend, PHP and WordPress for the backend, and MySql as the database.",
@@ -294,6 +293,7 @@ function updateLanguage() {
     learnMore: document.querySelectorAll(".learnMore"),
     descriptionToolbox: document.getElementById("descriptionToolbox"),
     descriptionSteamer: document.getElementById("descriptionSteamer"),
+    descriptionAvenir: document.getElementById("descriptionAvenir"),
     projectSteamer: document.getElementById("projectSteamer"),
     business: document.getElementById("business"),
     techno: document.getElementById("techno"),

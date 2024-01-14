@@ -283,6 +283,7 @@ li {
 }
 .portfolio-box img {
   width: 100%;
+  object-fit: cover;
   transition: 0.5s ease;
 }
 .portfolio-box .portfolio-info {
@@ -416,11 +417,10 @@ li {
   justify-content: center;
   align-items: center;
   margin: 20px;
-  
 }
-.sentence{
-  width: 100px; /* Remplacez 100px par la largeur souhaitée */
-  height: auto;
+.image.avenir-img img {
+  width: 200px; 
+  height: 200px; 
 }
 /***********toolbox***************/
 .toolbox-button a {
@@ -429,9 +429,6 @@ li {
   align-items: center;
   margin: 60px auto 0 auto; /* Ajoutez la marge et centre horizontalement */
 }
-
-
-
 /*************contact*******/
 .contact {
   display: grid;
@@ -697,7 +694,10 @@ footer {
     gap: 2.5rem;
     margin: 0 6rem;
   }
-  
+  #projectBox p {
+    word-spacing: -0.05em;
+    line-height: 1.4;
+  }
   /*************project steamer***************/
   .head {
     font-size: 2rem;
@@ -845,6 +845,10 @@ footer {
     gap: 2.5rem;
     margin: 0 6rem;
   }
+  #projectBox p {
+    word-spacing: 0.4em;
+    line-height: 1.3;
+  }
   /*********project steamer*******/
   .head {
     font-size: 2rem;
@@ -945,6 +949,7 @@ footer {
     width: 10rem;
     height: 90%;
   }
+  
   /***********about*************/
   .about h2 {
     font-size: 3rem;
@@ -1011,7 +1016,10 @@ footer {
     width: 9.5rem;
     margin-bottom: 8px;
   }
- 
+   #projectBox p, #projectTwo p {
+    font-size: 10px;
+    margin: 0 2px;
+  }
   /*********projet steamer*********/
   .head {
     font-size: 2rem;
@@ -1020,16 +1028,19 @@ footer {
   .arrow {
     font-size: 40px;
   }
-
-  .image img {
-    max-width: 100px;
-    margin: 10px 5px; 
+  #business, #techno {
+    font-size: 17px;
+    margin: 0 5px;
   }
-  .project p {
-    font-size: 2rem; 
+  .image img {
+    max-width: 105px;
+    margin: -3px;
+    padding: 5px
+  }
+  #projectOne p {
+    font-size: 17px;
     margin: 0 auto;
   }
-
   /*******contact**********/
   .contact-content {
     display: grid;
