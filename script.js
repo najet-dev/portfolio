@@ -127,7 +127,6 @@ function sendMail() {
     .send(serviceID, templateID, params)
     .then((res) => {
       alert("E-mail envoyé avec succès!");
-
       // Clear form fields after successful submission
       document.querySelector("#name").value = "";
       document.querySelector("#email").value = "";
@@ -138,14 +137,12 @@ function sendMail() {
       console.error("Erreur lors de l'envoi de l'e-mail:", error);
     });
 }
-
 // Function to validate an email address
 function validateEmail(email) {
   // Use a regular expression to validate the email address
   let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
-
 //toggle icon navbar
 const icons = document.getElementById("icons");
 const nav = document.querySelector(".navbar");
@@ -295,6 +292,10 @@ function updateLanguage() {
     descriptionSteamer: document.getElementById("descriptionSteamer"),
     descriptionAvenir: document.getElementById("descriptionAvenir"),
     projectSteamer: document.getElementById("projectSteamer"),
+    projectToolbox: document.getElementById("projectToolbox"),
+    toolbox: document.getElementById("toolbox"),
+    technoToolbox: document.getElementById("technoToolbox"),
+    projectBox: document.getElementById("projectBox"),
     business: document.getElementById("business"),
     techno: document.getElementById("techno"),
     projectOne: document.getElementById("projectOne"),
@@ -303,11 +304,6 @@ function updateLanguage() {
     technos: document.getElementById("technos"),
     projectTwo: document.getElementById("projectTwo"),
     langButton: document.getElementById("lang-button"),
-    projectToolbox: document.getElementById("projectToolbox"),
-    toolbox: document.getElementById("toolbox"),
-    technoToolbox: document.getElementById("technoToolbox"),
-    description: document.getElementById("description"),
-    projectBox: document.getElementById("projectBox"),
     contactMe: document.getElementById("contactMe"),
     nameInput: document.getElementById("name"),
     emailInput: document.getElementById("email"),
@@ -319,14 +315,14 @@ function updateLanguage() {
     const element = elements[key];
 
     if (element && texts[isFrench ? "fr" : "en"][key]) {
-      // Vérifiez si l'élément est une NodeList (cas de "learnMore")
+      // Check if the element is a NodeList (case of "learnMore")
       if (key === 'learnMore' && element.length > 0) {
-        // Mettez à jour le texte de tous les éléments dans la NodeList
+        // Update the text of all items in the NodeList
         element.forEach((el, index) => {
           el.innerHTML = texts[isFrench ? "fr" : "en"][key];
         });
       } else {
-        // Mettez à jour le texte pour les autres types d'éléments
+        // Update text for other element types
         element.innerHTML = texts[isFrench ? "fr" : "en"][key];
       }
     } else {
