@@ -95,15 +95,15 @@ html {
   position: relative;
 }
 .home-content h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 500;
   line-height: 1.2;
 }
 .home-content .text {
-  width: 38rem;
+  width: 65rem;
 }
 .home-content .text h3 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 400;
   color: var(--main-color);
   margin-bottom: 45px;
@@ -162,8 +162,11 @@ html {
   width: 100%;
 }
 .robot-home {
-  width: 450px;
-  height: 360px;
+  width: 400px;
+  height: 300px;
+  position: absolute; 
+  bottom: 20px; 
+  right: 20px; 
 }
 /****************about***************/
 .about {
@@ -304,7 +307,6 @@ li {
 .portfolio-box:hover .portfolio-info {
   opacity: 1; 
   background: rgba(0, 0, 0, 0.8); 
-
 }
 .portfolio-box .portfolio-info a {
   color: white;
@@ -613,20 +615,20 @@ footer {
     width: 42px;
   }
   .home-content h1 {
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 1.2;
+    font-size: 5rem;
   }
   .home-content .text {
     width: 38rem;
   }
   .home-content .text h3 {
-    font-size: 3rem;
-    font-weight: 400;
+    font-size: 3.5rem;
+  }
+  .home-content .text {
+    width: 65rem;
   }
   .robot-home {
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 250px;
   }
   .btn-box {
     width: 25rem;
@@ -635,7 +637,7 @@ footer {
   .btn-box .btn {
     width: 10rem;
     height: 90%;
-  }
+  } 
   /****************about***************/
   .about h2 {
     font-size: 3.5rem;
@@ -777,19 +779,19 @@ footer {
     width: 42px;
   }
   .home-content h1 {
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 1.2;
+    font-size: 5rem;
   }
   .home-content .text {
-    width: 32rem;
+    width: 38rem;
   }
   .home-content .text h3 {
-    font-size: 2.5rem;
-    font-weight: 400;
+    font-size: 3.5rem;
+  }
+  .home-content .text {
+    width: 65rem;
   }
   .robot-home {
-    width: 350px;
+    width: 300px;
     height: 250px;
   }
   .btn-box {
@@ -945,12 +947,12 @@ footer {
     width: 35px;
   }
   .home-content h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 500;
     line-height: 1.2;
   }
   .home-content .text {
-    width: 22rem;
+    width: 30rem;
   }
   .home-content .text h3 {
     font-size: 2.8rem;
@@ -973,17 +975,17 @@ footer {
     margin-bottom: -1rem;
   }
   .about-img img {
-    width: 20rem;
+    width: 18rem;
   }
   .about-content h3 {
     margin-top: 45px;
+    margin-bottom: 35px;
     font-size: 2rem;
   }
   .about-content p {
-    font-size: 2rem;
-    margin: 2rem 0 3rem;
+    font-size: 15px;
+    margin: 0 auto;
     line-height: 1.2;
-    text-align: justify;
   }
   /***************skills*******************/
   .skill h2 {
@@ -1139,16 +1141,13 @@ footer {
     width: 35px;
   }
   .home-content h1 {
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 1.;
+    font-size: 3.5rem;
   }
   .home-content .text {
-    width: 22rem;
+    width: 30rem;
   }
   .home-content .text h3 {
     font-size: 2.5rem;
-    font-weight: 400;
   }
   .robot-home {
     display: none;
@@ -1171,13 +1170,13 @@ footer {
   }
   .about-content h3 {
     margin-top: 45px;
-    font-size: 2rem;
+    margin-bottom: 35px;
+    font-size: 1.8rem;
   }
   .about-content p {
-    font-size: 2rem;
-    margin: 2rem 0 2rem;
+    font-size: 17px;
+    margin: 0 auto;
     line-height: 1.2;
-    text-align: justify;
   }
   /***************skills*******************/
   .skill h2 {
