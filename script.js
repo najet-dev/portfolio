@@ -80,17 +80,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 //carousel
 document.addEventListener("DOMContentLoaded", function () {
-  if (document.querySelector(".skills")) {
+  if (document.querySelector(".skill")) {
     const list = document.querySelector("#list");
     const listContent = Array.from(list.children);
 
-    listContent.forEach((item) => {
-      const duplicatedItem = item.cloneNode(true);
-      duplicatedItem.setAttribute("aria-hidden", true);
-      list.appendChild(duplicatedItem);
+    // Clone the list content
+    const clonedContent = listContent.map((item) => item.cloneNode(true));
+
+    // Append the cloned content to the original list
+    clonedContent.forEach((clonedItem) => {
+      list.appendChild(clonedItem);
     });
   }
 });
+
 //Email
 function sendMail() {
   emailjs.init("OLC9XWnhpO7QsE0DA");
@@ -179,6 +182,7 @@ const texts = {
       "Je suis une développeuse dotée de solides compétences en programmation et conception de logiciels. Avec une expérience de deux ans, ma passion pour les technologies me motive à contribuer activement à des projets innovants. Mon objectif est d'allier mon expertise technique à la créativité afin d'atteindre des résultats probants.",
     langButton: "Changer la langue",
     skillsTitle: "Mes <span class='pink-text'>Compétences</span>",
+    carouselText: "Le carrousel offre une vue d'ensemble de mes compétences en langages, technologies et outils. Chaque image représente une de mes aptitudes professionnelles.",
     projectTitle: "Mes <span class='pink-text'>Projets</span>",
     learnMore: "En savoir plus",
     descriptionToolbox:"<p>Plateforme web pour enseignants, propose idées et outils pédagogiques pour des cours interactifs et personnalisés.</p>",
@@ -219,6 +223,7 @@ const texts = {
       "I am a developer with strong programming skills and software design. With two years of experience, ma passion for technologies motivates me to actively contribute to innovative projects. My goal is to combine my technical expertise with creativity in order to achieve convincing results.",
     langButton: "Change Language",
     skillsTitle: "My <span class='pink-text'>skills</span>",
+    carouselText: "The carousel offers an overview of my skills in languages, technologies and tools. Each image represents one of my professional skills.",
     projectTitle: "My  <span class='pink-text'>Projects<span>",
     learnMore: "Learn more",
     descriptionToolbox: "<p>Web platform for teachers, offers ideas and educational tools for interactive and personalized courses.</p>",
@@ -286,6 +291,7 @@ function updateLanguage() {
     aboutMe: document.getElementById("aboutMe"),
     aboutContentText: document.getElementById("about-content-text"),
     skillsTitle: document.getElementById("skillsTitle"),
+    carouselText: document.getElementById("carouselText"),
     projectTitle: document.getElementById("projectTitle"),
     learnMore: document.querySelectorAll(".learnMore"),
     descriptionToolbox: document.getElementById("descriptionToolbox"),

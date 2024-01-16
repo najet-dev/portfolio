@@ -220,15 +220,21 @@ span {
 .skill h2 {
   font-size: 4rem;
   margin-top: 60px;
-  margin-bottom: 110px;
+  margin-bottom: 30px; 
 }
-img {
-  width: 270px;
-  height: 270px;
+#carouselText {
+  font-size: 2.5rem;
+  text-align: justify;
+  margin: 0 200px 80px 200px; 
+}
+#container img {
+  width: 200px;
+  height: 200px;
   margin: 15px;
 }
 #container {
   width: 50vw;
+  margin: 0 auto; 
   mask: linear-gradient(90deg, transparent, white 20%, white 60%, transparent);
   -webkit-mask: linear-gradient(
     90deg,
@@ -660,9 +666,14 @@ footer {
     font-size: 3rem;
     margin-bottom: 100px;
   }
+  #carouselText {
+    font-size: 2.5rem;
+    text-align: justify;
+    margin: 0 50px 80px 50px; /* margin-top margin-right margin-bottom margin-left */
+  }
   img {
-    width: 270px;
-    height: 270px;
+    width: 200px;
+    height: 200px;
     margin: 15px;
   }
   #container {
@@ -823,9 +834,14 @@ footer {
     font-size: 3rem;
     margin-bottom: 100px;
   }
+  #carouselText {
+    font-size: 2rem;
+    text-align: justify;
+    margin: 0 50px 80px 50px; /* margin-top margin-right margin-bottom margin-left */
+  }
   img {
-    width: 270px;
-    height: 270px;
+    width: 200px;
+    height: 200px;
     margin: 15px;
   }
   #container {
@@ -993,9 +1009,14 @@ footer {
     font-size: 3rem;
     margin-bottom: 100px;
   }
+  #carouselText {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0 40px 70px 40px; 
+  }
   img {
-    width: 270px;
-    height: 270px;
+    width: 200px;
+    height: 200px;
     margin: 15px;
   }
   #container {
@@ -1184,9 +1205,14 @@ footer {
     font-size: 3rem;
     margin-bottom: 100px;
   }
+  #carouselText {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0 30px 70px 30px; /* margin-top margin-right margin-bottom margin-left */
+  }
   img {
-    width: 270px;
-    height: 270px;
+    width: 200px;
+    height: 200px;
     margin: 15px;
   }
   #container {
