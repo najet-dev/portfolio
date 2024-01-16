@@ -629,6 +629,7 @@ footer {
   .robot-home {
     width: 300px;
     height: 250px;
+    bottom: 5px;
   }
   .btn-box {
     width: 25rem;
