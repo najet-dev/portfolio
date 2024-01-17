@@ -182,7 +182,7 @@ const texts = {
       "Je suis une développeuse dotée de solides compétences en programmation et conception de logiciels. Avec une expérience de deux ans, ma passion pour les technologies me motive à contribuer activement à des projets innovants. Mon objectif est d'allier mon expertise technique à la créativité afin d'atteindre des résultats probants.",
     langButton: "Changer la langue",
     skillsTitle: "Mes <span class='pink-text'>Compétences</span>",
-    carouselText: "Le carrousel offre une vue d'ensemble de mes compétences en langages, technologies et outils. Chaque image représente une de mes aptitudes professionnelles.",
+    carouselText: "Chaque image représente une de mes aptitudes professionnelles.",
     projectTitle: "Mes <span class='pink-text'>Projets</span>",
     learnMore: "En savoir plus",
     descriptionToolbox:"<p>Plateforme web pour enseignants, propose idées et outils pédagogiques pour des cours interactifs et personnalisés.</p>",
@@ -223,7 +223,7 @@ const texts = {
       "I am a developer with strong programming skills and software design. With two years of experience, ma passion for technologies motivates me to actively contribute to innovative projects. My goal is to combine my technical expertise with creativity in order to achieve convincing results.",
     langButton: "Change Language",
     skillsTitle: "My <span class='pink-text'>skills</span>",
-    carouselText: "The carousel offers an overview of my skills in languages, technologies and tools. Each image represents one of my professional skills.",
+    carouselText: "Each image represents one of my professional skills.",
     projectTitle: "My  <span class='pink-text'>Projects<span>",
     learnMore: "Learn more",
     descriptionToolbox: "<p>Web platform for teachers, offers ideas and educational tools for interactive and personalized courses.</p>",
@@ -247,7 +247,7 @@ const texts = {
     "<strong>The technologies</strong> : JavaScript for the frontend, PHP and WordPress for the backend, and MySql as the database.",
     projectBox:
     "<p>As part of the 'Toolbox' project, I identified and improved essential functionalities. Through the development of a custom plugin, I facilitated a more efficient integration while ensuring a smooth transition of existing functionality. My goal was to optimize the user experience, and as the sole developer on the project, my work significantly improved the performance and usability of the Toolbox.</p>",
-    contactMe: "Contact <span class='pink-text'>Me</span>!",
+    contactMe: "Contact <span class='pink-text'>Me</span> !",
     placeholders: {
       name: "Name",
       email: "Email",
