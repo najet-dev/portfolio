@@ -223,9 +223,9 @@ span {
   margin-bottom: 30px; 
 }
 #carouselText {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-align: justify;
-  margin: 0 200px 80px 200px; 
+  margin: 0 320px 80px 320px; 
 }
 #container img {
   width: 200px;
@@ -380,13 +380,14 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  padding: 20px;
 }
 .image img {
   max-width: 120px;
   height: auto;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-right: 20px; 
 }
 .enlarged-container {
   position: fixed;
@@ -667,13 +668,13 @@ footer {
     margin-bottom: 100px;
   }
   #carouselText {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: justify;
-    margin: 0 50px 80px 50px; /* margin-top margin-right margin-bottom margin-left */
+    margin: 0 50px 80px 50px; 
   }
   img {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     margin: 15px;
   }
   #container {
@@ -703,6 +704,10 @@ footer {
     align-items: center;
     gap: 2.5rem;
     margin: 0 6rem;
+  }
+  .portfolio-box img{
+    width: 350px;
+    height: auto;
   }
   #enlargedImage{
     max-width: 100%
@@ -871,6 +876,10 @@ footer {
     align-items: center;
     gap: 2.5rem;
     margin: 0 6rem;
+  }
+  .portfolio-box img{
+    width: 350px;
+    height: auto;
   }
   #enlargedImage{
     max-width: 100%
@@ -1208,7 +1217,7 @@ footer {
   #carouselText {
     font-size: 1.8rem;
     text-align: center;
-    margin: 0 30px 70px 30px; /* margin-top margin-right margin-bottom margin-left */
+    margin: 0 30px 70px 30px; 
   }
   img {
     width: 200px;
@@ -1246,17 +1255,8 @@ footer {
   .portfolio h3 {
     font-size: 2.5rem;
   }
-  .portfolio-box img {
-    height: auto;
-  }
-  .portfolio-info a {
-    font-size: 10px;
-    width: 8rem;
-  } 
-  .portfolio-box .portfolio-info p {
-    font-size: 15px;
-    text-align: center;
-    color: white;
+  .portfolio-box {
+    cursor: pointer; 
   }
   #enlargedImage{
     max-width: 100%
