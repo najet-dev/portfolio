@@ -206,7 +206,7 @@ span {
   margin-top: 40px;
   font-size: 2.5rem;
 }
-.about-content p {
+#about-content-text {
   font-size: 2.2rem;
   margin: 1rem 30rem;
   line-height: 1.2;
@@ -1249,7 +1249,7 @@ footer {
     height: auto;
   }
   .portfolio-box {
-    cursor: pointer; /* Ajouter le curseur pointer pour indiquer la possibilité de cliquer */
+    cursor: pointer; 
   }
   .portfolio-box:hover .portfolio-info {
     opacity: 1;
