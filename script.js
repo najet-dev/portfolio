@@ -289,7 +289,7 @@ function updateLanguage() {
     contact: document.getElementById("contact-link"),
     jobTitle: document.getElementById("job-title"),
     aboutMe: document.getElementById("aboutMe"),
-    aboutContentText: document.getElementById("about-content-text"),
+    aboutContentText: document.getElementById("aboutText"),
     skillsTitle: document.getElementById("skillsTitle"),
     carouselText: document.getElementById("carouselText"),
     projectTitle: document.getElementById("projectTitle"),
@@ -316,6 +316,7 @@ function updateLanguage() {
     subjectInput: document.getElementById("subject"),
     messageTextarea: document.getElementById("message"),
   };
+  
 
    for (const key in elements) {
     const element = elements[key];
