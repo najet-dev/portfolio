@@ -788,6 +788,10 @@ footer {
     color: var(--text-color);
   }
   /*****************home********************/
+  .logo {
+    display: inline-block;
+    width: 35px;
+  }
   .home-content h1 {
     font-size: 5rem;
   }
@@ -962,6 +966,9 @@ footer {
     color: var(--text-color);
   }
   /*****************home********************/
+  .logo {
+    width: 30px;
+  }
   .home-content h1 {
     font-size: 4rem;
     font-weight: 500;
@@ -1156,6 +1163,9 @@ footer {
     color: var(--text-color);
   }
    /*****************home********************/
+   .logo {
+    width: 30px;
+  }
   .home-content h1 {
     font-size: 3.5rem;
   }
