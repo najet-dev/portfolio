@@ -1201,7 +1201,7 @@ footer {
   }
   .about-content p {
     font-size: 15px;
-    margin: 0 19px;
+    margin: 0 15px;
     line-height: 1.2;
   }
   /***************skills*******************/
@@ -1249,7 +1249,7 @@ footer {
     height: auto;
   }
   .portfolio-box {
-    cursor: pointer; /* Ajouter le curseur pointer pour indiquer la possibilité de cliquer */
+    cursor: pointer; 
   }
   .portfolio-box:hover .portfolio-info {
     opacity: 1;
