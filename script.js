@@ -1,4 +1,4 @@
-// Fonction pour définir le thème en fonction du choix de l'utilisateur
+// Function to set the theme according to the user's choice
 function setThemeMode(isDarkMode) {
   const toggleIcon = document.querySelector(".toggle-icon");
 
@@ -12,33 +12,29 @@ function setThemeMode(isDarkMode) {
     toggleIcon.classList.add("bx-moon");
   }
 }
-
-// Fonction pour basculer entre le mode sombre et le mode clair
+// Function to switch between dark and light mode
 function toggleThemeMode() {
   const isDarkMode = document.body.classList.contains("dark-mode");
   setThemeMode(!isDarkMode);
 }
-
-// Écouteur d'événements pour le bouton de changement de thème
+// Event listener for theme change button
 const toggleThemeButton = document.querySelector(".toggle-theme");
 
-// Vérifier le thème dans le stockage local au chargement de la page
+// Check theme in local storage on page load
 document.addEventListener("DOMContentLoaded", () => {
   const storedTheme = localStorage.getItem("theme");
 
   if (storedTheme === null) {
-    // Si le thème n'est pas défini dans le stockage local, utilisez le thème clair par défaut
+    // If the theme is not defined in local storage, use the default light theme
     setThemeMode(false);
   } else {
-    // Si le thème est défini dans le stockage local, utilisez-le
     setThemeMode(storedTheme === "dark");
   }
 });
 
-// Écouteur d'événements pour le bouton de changement de thème
 toggleThemeButton.addEventListener("click", toggleThemeMode);
 
-// Sauvegarder le choix de l'utilisateur dans le stockage local
+// Save user selection in local storage
 toggleThemeButton.addEventListener("click", () => {
   const isDarkMode = document.body.classList.contains("dark-mode");
   localStorage.setItem("theme", isDarkMode ? "dark" : "light");
