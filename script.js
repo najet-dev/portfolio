@@ -1,5 +1,4 @@
-console.log("Script.js is running on this page");
-// Function to set theme based on user choice
+// Fonction pour définir le thème en fonction du choix de l'utilisateur
 function setThemeMode(isDarkMode) {
   const toggleIcon = document.querySelector(".toggle-icon");
 
@@ -14,7 +13,7 @@ function setThemeMode(isDarkMode) {
   }
 }
 
-// Function to switch between dark and light mode
+// Fonction pour basculer entre le mode sombre et le mode clair
 function toggleThemeMode() {
   const isDarkMode = document.body.classList.contains("dark-mode");
   setThemeMode(!isDarkMode);
@@ -22,19 +21,29 @@ function toggleThemeMode() {
 
 // Écouteur d'événements pour le bouton de changement de thème
 const toggleThemeButton = document.querySelector(".toggle-theme");
+
+// Vérifier le thème dans le stockage local au chargement de la page
+document.addEventListener("DOMContentLoaded", () => {
+  const storedTheme = localStorage.getItem("theme");
+
+  if (storedTheme === null) {
+    // Si le thème n'est pas défini dans le stockage local, utilisez le thème clair par défaut
+    setThemeMode(false);
+  } else {
+    // Si le thème est défini dans le stockage local, utilisez-le
+    setThemeMode(storedTheme === "dark");
+  }
+});
+
+// Écouteur d'événements pour le bouton de changement de thème
 toggleThemeButton.addEventListener("click", toggleThemeMode);
 
-// Event listener for theme change button
-const storedTheme = localStorage.getItem("theme");
-if (storedTheme) {
-  setThemeMode(storedTheme === "dark");
-}
-
-// Save user choice to local storage
+// Sauvegarder le choix de l'utilisateur dans le stockage local
 toggleThemeButton.addEventListener("click", () => {
   const isDarkMode = document.body.classList.contains("dark-mode");
   localStorage.setItem("theme", isDarkMode ? "dark" : "light");
 });
+
 
 //Menu active
 document.addEventListener("DOMContentLoaded", function () {

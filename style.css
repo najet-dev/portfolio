@@ -64,6 +64,7 @@ html {
   background-color: var(--bg-color); 
 }
 .logo {
+  color: #000;
   font-size: 2.5rem;
   font-weight: 600;
 }
@@ -180,14 +181,14 @@ html {
 }
 .heading {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 35px;
   margin-bottom: 60px;
 }
 span {
   color: var(--main-color);
 }
 .about-img {
-  padding-top: 60px;
+  padding-top: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -203,13 +204,13 @@ span {
   text-align: center;
 }
 .about-content h3 {
-  margin-top: 40px;
+  margin: 30px 0 20px 0;
   font-size: 2.5rem;
 }
 .about-content p {
   font-size: 2.2rem;
   line-height: 1.2;
-  padding: 0 100px;
+  padding: 0 200px;
   text-align: justify;
 }
 /******skills********/
@@ -219,7 +220,6 @@ span {
 }
 .skill h2 {
   font-size: 4rem;
-  margin-top: 60px;
   margin-bottom: 30px; 
 }
 #carouselText {
@@ -265,10 +265,6 @@ li {
   }
 }
 /*********projects***************/
-/*********projects***************/
-.portfolio {
-  margin-top: 40px;
-}
 .portfolio h2 {
   font-size: 4rem;
   margin-bottom: 100px;
@@ -358,17 +354,20 @@ li {
   margin: 60px auto 0 auto; 
 }
 /**************steamer*****************/
-.head {
+.head{
   font-size: 2rem;
   font-weight: 500;
   text-align: center;
+}
+#projectToolbox, #projectSteamer, #projectAvenir{
+  margin-top: -1px;
 }
 .arrow {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 42px;
-  margin-top: 28px;
+  margin-top: 20px;
   font-weight: bold;
   color: var(--text-color);
   transition: color 0.3s;
@@ -380,14 +379,13 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px;
+  margin: 15px;
 }
 .image img {
   max-width: 120px;
   height: auto;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-right: 20px; 
 }
 .enlarged-container {
   position: fixed;
@@ -1158,7 +1156,7 @@ footer {
   }
   /*****************home********************/
   .logo {
-    width: 25px;
+    font-size: 2rem;
   }
   .home-content h1 {
     font-size: 3rem;
