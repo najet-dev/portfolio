@@ -346,6 +346,19 @@ li {
   font-size: 3rem;
   color: var(--second-bg-color);
 }
+.columns {
+  display: flex;
+  justify-content: space-between; /* Pour espacement équitable entre les colonnes */
+  flex-wrap: wrap; /* Pour permettre le passage à la ligne si l'espace est insuffisant */
+}
+
+.column {
+  width: 48%; /* Pour laisser un petit espace entre les colonnes */
+  margin-bottom: 20px; /* Espacement entre les colonnes */
+  box-sizing: border-box; /* Pour inclure la bordure et le padding dans la largeur déclarée */
+}
+
+
 /***********toolbox***************/
 .toolbox-button a {
   display: flex;
