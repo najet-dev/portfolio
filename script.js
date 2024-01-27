@@ -197,20 +197,23 @@ const texts = {
     business: "<strong>Entreprise :</strong> Mithra production",
     duration: "<strong>Durée du projet :</strong> 6 semaines",
     methodology: "<strong>Méthodologie :</strong> Adoptant une approche de projet agile, nous avons suivi le framework Scrum au sein d'une équipe de 4 personnes. Les activités étaient organisées en sprints d'une semaine, favorisant ainsi une collaboration efficace et des itérations rapides.",
-    management: "<strong>Outils de developpement :</strong>Nous avons utilisé des outils tels que Confluence pour la documentation, Jira pour le suivi des tâches, et Git pour la gestion de version.",
+    management: "<strong>Outils de developpement :</strong> Nous avons utilisé des outils tels que Confluence pour la documentation, Jira pour le suivi des tâches et Git pour la gestion de version.",
     techno:
       " <strong>Les technologies :</strong> Ionic pour le frontend, NestJS pour le backend et MariaDB comme base de données.",
     projectOne:
-      "<p><strong>Réalisations Spécifiques : </strong>Dans ce projet, j'ai conçu la page de profil et créé la page 'favorites' avec des badges pour les nouveaux likes et matchs. J'ai aussi géré l'enregistrement des informations sur les likes, dislikes, et les matchs entre utilisateurs, incluant une suppression automatique des dislikes après 30 jours.</p>",
+      "<p><strong>Réalisations Spécifiques : </strong>Dans ce projet, j'ai conçu la page de profil et créé la page 'favorites' avec des badges pour les nouveaux likes et matchs. J'ai également géré l'enregistrement des informations sur les likes, dislikes et les matchs entre utilisateurs, incluant une suppression automatique des dislikes après 30 jours.</p>",
     projectAvenir: "<span class='pink-text'> Avenir</span>",
     avenir: "<strong>Entreprise :</strong> Avenir",
     technos:
       " <strong>Les technologies :</strong> Ionic pour le frontend, NestJS pour le backend et MariaDB comme base de données.",
-    projectTwo:"<p>Mon rôle dans ce projet consistait à concevoir un formulaire permettant aux utilisateurs d'ajouter des messages positifs, tout en mettant en place une fonctionnalité de rappels quotidiens personnalisables. Cette option permettait aux utilisateurs de programmer des rappels en fonction de leurs propres messages inspirants.</p>",
+    projectTwo:"<strong>Réalisations Spécifiques : </strong> Mon rôle dans ce projet consistait à concevoir un formulaire permettant aux utilisateurs d'ajouter des messages positifs, tout en mettant en place une fonctionnalité de rappels quotidiens personnalisables. Cette option permettait aux utilisateurs de programmer des rappels en fonction de leurs propres messages inspirants.",
     projectToolbox: "<span class='pink-text'> La boîte à Outils</span>",
     toolbox: "<strong>Entreprise :</strong>Université de Haute Alsace",
+    durationToolbox: "<strong>Durée du projet :</strong> 6 mois",
+    methodologyToolbox: "<strong>Méthodologie :</strong>  En tant que seule développeuse sur le projet, j'ai opté pour la méthode Agile Scrum. Cette approche m'a permis de collaborer étroitement avec le client, en mettant l'accent sur la priorisation des fonctionnalités essentielles. L'adaptabilité était fondamentale, avec des réunions ajustées en fréquence en fonction de l'avancement du projet. Cette méthodologie a été cruciale pour répondre de manière itérative aux besoins du client, assurant une livraison alignée sur les objectifs du projet.",
+
     technoToolbox:"<strong>Les technologies :</strong> JavaScript pour le frontend, PHP et WordPress pour le backend et MySQL comme base de données.",
-    projectBox: "<p>En tant que développeuse unique du projet 'La Boîte à Outils', j'ai effectué la migration des fonctionnalités vers un plugin. Cela a impliqué le transfert et la refonte complète d'aspects essentiels tels que l'affichage des outils pédagogiques, la gestion du panier et la sauvegarde des sélections. Mon objectif principal était d'optimiser le code pour une meilleure performance et d'améliorer l'expérience utilisateur du site. Pour découvrir le résultat final, veuillez cliquer sur le bouton ci-dessous.</p>",
+    projectBox: "<strong>Réalisations Spécifiques : </strong> En tant que développeuse unique du projet 'La Boîte à Outils', j'ai effectué la migration des fonctionnalités vers un plugin. Cela a impliqué le transfert et la refonte complète d'aspects essentiels tels que l'affichage des outils pédagogiques, la gestion du panier et la sauvegarde des sélections. Mon objectif principal était d'optimiser le code pour une meilleure performance et d'améliorer l'expérience utilisateur du site. Pour découvrir le résultat final, veuillez cliquer sur le bouton ci-dessous.",
     contactMe: "Contactez-<span class='pink-text'>Moi</span> !",
     placeholders: {
       name: "Nom",
@@ -238,27 +241,28 @@ const texts = {
     descriptionSteamer: "<p>Dating application synchronized with STEAM, connecting users based on their shared games over the past 15 days.</p>",
     descriptionAvenir:"<p>The mobile app allows users to write positive messages and schedule daily reminders based on these messages.</p>",
     projectSteamer: "<span class='pink-text'>Steamer</span>",
-    business: "<strong>Company :</strong>Mithra production",
+    business: "<strong>Company : </strong> Mithra production",
     duration: "<strong>Project duration : </strong> 6 weeks.",
-
     methodology: "<strong>Méthodologie : </strong>Adopting an agile project approach, we followed the Scrum framework as part of a four person team. Activities were organized in one-week sprints, promoting effective collaboration and rapid iterations.",
-    management: "<strong>Development tools :</strong>We used tools such as Confluence for documentation, Jira for task tracking, and Git for version management.",
+    management: "<strong>Development tools :</strong> We used tools such as Confluence for documentation, Jira for task tracking, and Git for version management.",
     techno:
-      "<strong>The technologies :</strong>Ionic for the frontend, NestJS for the backend and  MariaDB for the database.",
+      "<strong>The technologies :</strong> Ionic for the frontend, NestJS for the backend and  MariaDB for the database.",
     projectOne:
-      "<p>In this project, I designed the profile page and created the 'favorites' page with badges for new likes and matches. I also managed the recording of information on likes, dislikes, and matches between users, including automatic deletion of dislikes after 30 days.</p>",
+      "<strong>Specific projects: </strong> In this project, I designed the profile page and created the 'favorites' page with badges for new likes and matches. I also managed the recording of information on likes, dislikes, and matches between users, including automatic deletion of dislikes after 30 days.",
     projectAvenir: "<span class='pink-text'> Avenir</span>",
-    avenir: "<strong>Company :</strong>Avenir",
+    avenir: "<strong>Company :</strong> Avenir",
     technos:
-      "<strong>The technologies :</strong>Ionic for the frontend, NestJS for the backend and  MariaDB for the database.",
+      "<strong>The technologies :</strong> Ionic for the frontend, NestJS for the backend and  MariaDB for the database.",
     projectTwo:
-      "<p>My role in this project was to design a form allowing users to add positive messages, while implementing a customizable daily reminders functionality. This option allowed users to schedule reminders based on their own inspirational messages.</p>",
+      "<strong>Specific projects : </strong> My role in this project was to design a form allowing users to add positive messages, while implementing a customizable daily reminders functionality. This option allowed users to schedule reminders based on their own inspirational messages.",
     projectToolbox: "<span class='pink-text'> La boîte à Outils</span>",
-    toolbox: "<strong>Company :</strong>Université de Haute Alsace",
+    toolbox: "<strong>Company :</strong> Université de Haute Alsace",
+    durationToolbox: "<strong>Durée du projet :</strong> 6 month",
+    methodologyToolbox: "<strong>Méthodologie : </strong> As the only developer on the project, I opted for the Agile Scrum method. This approach enabled me to collaborate closely with the customer, focusing on prioritizing essential functionalities. Adaptability was fundamental, with meetings adjusted in frequency as the project progressed. This methodology was crucial in responding iteratively to the customer's needs, ensuring delivery in line with project objectives.",
     technoToolbox:
-    "<strong>The technologies :</strong>JavaScript for the frontend, PHP and WordPress for the backend, and MySql as the database.",
+    "<strong>The technologies :</strong> JavaScript for the frontend, PHP and WordPress for the backend, and MySql as the database.",
     projectBox:
-    "<p>As part of the 'Toolbox' project, I identified and improved essential functionalities. Through the development of a custom plugin, I facilitated a more efficient integration while ensuring a smooth transition of existing functionality. My goal was to optimize the user experience, and as the sole developer on the project, my work significantly improved the performance and usability of the Toolbox.</p>",
+    "<strong>Specific projects: </strong>  As part of the 'Toolbox' project, I identified and improved essential functionalities. Through the development of a custom plugin, I facilitated a more efficient integration while ensuring a smooth transition of existing functionality. My goal was to optimize the user experience, and as the sole developer on the project, my work significantly improved the performance and usability of the Toolbox.",
     contactMe: "Contact <span class='pink-text'>Me</span> !",
     placeholders: {
       name: "Name",
@@ -316,7 +320,9 @@ function updateLanguage() {
     projectBox: document.getElementById("projectBox"),
     business: document.getElementById("business"),
     duration: document.getElementById("duration"),
+    durationToolbox: document.getElementById("durationToolbox"),
     methodology: document.getElementById("methodology"),
+    methodologyToolbox: document.getElementById("methodologyToolbox"),
     management: document.getElementById("management"),
     techno: document.getElementById("techno"),
     projectOne: document.getElementById("projectOne"),
