@@ -168,6 +168,28 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
   console.log("Menu State:", navbar.classList.contains("active"));
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  const jobTitle = document.getElementById("job-title");
+  const text = jobTitle.innerText.trim();
+  jobTitle.innerHTML = ""; // Deletes the original text
+
+  for (let i = 0; i < text.length; i++) {
+    const span = document.createElement("span");
+    span.textContent = text[i];
+    span.classList.add("reveal");
+    span.style.animationDelay = `${i * 0.1}s`; // Add a delay to each letter
+    jobTitle.appendChild(span);
+  }
+
+  // Delay to start text animation before robot animation
+  setTimeout(() => {
+    const fallingRobot = document.querySelector(".falling-robot");
+    fallingRobot.style.transform = "translateY(0)";
+    fallingRobot.style.opacity = "1";
+  }, text.length * 0.1 * 1000 + 100); // Delay based on number of letters and animation delay
+});
+
 //change language
 // Use "fr" by default if language is not defined in local storage
 let isFrench =
@@ -196,7 +218,7 @@ const texts = {
     projectSteamer: "<span class='pink-text'> Steamer</span>",
     business: "<strong>Entreprise :</strong> Mithra production",
     duration: "<strong>Durée du projet :</strong> 6 semaines",
-    methodology: "<strong>Méthodologie :</strong> Adoptant une approche de projet agile, nous avons suivi le framework Scrum au sein d'une équipe de 4 personnes. Les activités étaient organisées en sprints d'une semaine, favorisant ainsi une collaboration efficace et des itérations rapides.",
+    methodology: "<strong>Méthodologie :</strong> Adoptant une approche de projet agile, nous avons suivi le framework Scrum au sein d'une équipe de 5 personnes. Les activités étaient organisées en sprints d'une semaine, favorisant ainsi une collaboration efficace et des itérations rapides.",
     management: "<strong>Outils de developpement :</strong> Nous avons utilisé des outils tels que Confluence pour la documentation, Jira pour le suivi des tâches et Git pour la gestion de version.",
     techno:
       " <strong>Les technologies :</strong> Ionic pour le frontend, NestJS pour le backend et MariaDB comme base de données.",
@@ -243,7 +265,7 @@ const texts = {
     projectSteamer: "<span class='pink-text'>Steamer</span>",
     business: "<strong>Company : </strong> Mithra production",
     duration: "<strong>Project duration : </strong> 6 weeks.",
-    methodology: "<strong>Méthodologie : </strong>Adopting an agile project approach, we followed the Scrum framework as part of a four person team. Activities were organized in one-week sprints, promoting effective collaboration and rapid iterations.",
+    methodology: "<strong>Méthodologie : </strong>Adopting an agile project approach, we followed the Scrum framework as part of a 5 person team. Activities were organized in one-week sprints, promoting effective collaboration and rapid iterations.",
     management: "<strong>Development tools :</strong> We used tools such as Confluence for documentation, Jira for task tracking, and Git for version management.",
     techno:
       "<strong>The technologies :</strong> Ionic for the frontend, NestJS for the backend and  MariaDB for the database.",

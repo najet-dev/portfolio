@@ -33,7 +33,7 @@ body {
   --main-color: #e6007e;
   background-color: var(--bg-color);
   color: var(--text-color);
-  overflow-y: auto;
+  overflow-y: auto; 
   display: grid;
   align-content: center;
   place-content: center;
@@ -163,17 +163,33 @@ html {
 .btn-box .btn:hover::before {
   width: 100%;
 }
-.robot-home {
-  width: 400px;
-  height: 300px;
-  position: absolute; 
-  bottom: 20px; 
-  right: 20px; 
+.falling-robot {
+  position: absolute;
+  width: 40rem; 
+  height: 30rem;
+  right: 2rem;
+  bottom: 2rem; 
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 5s ease, opacity 0.5s ease;
+}
+#job-title {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.reveal {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 /****************about***************/
 .about {
-  margin-top: 40px;
-  padding: 60px 20px;
+  margin-top: 4rem;
+  padding: 6rem 2rem;
 }
 .about h2 {
   font-size: 4rem;
@@ -188,7 +204,7 @@ span {
   color: var(--main-color);
 }
 .about-img {
-  padding-top: 50px;
+  padding-top: 5rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -204,32 +220,32 @@ span {
   text-align: center;
 }
 .about-content h3 {
-  margin: 30px 0 20px 0;
+  margin: 3rem 0 2rem 0;
   font-size: 2.5rem;
 }
 .about-content p {
   font-size: 2.2rem;
   line-height: 1.2;
-  padding: 0 200px;
+  padding: 0 20rem;
   text-align: justify;
 }
 /******skills********/
 .skill {
-  margin-top: 40px;
-  padding: 60px 20px;
+  margin-top: 4rem;
+  padding: 6rem 2rem;
 }
 .skill h2 {
   font-size: 4rem;
-  margin-bottom: 30px; 
+  margin-bottom: 3rem; 
 }
 #carouselText {
   font-size: 2.2rem;
-  margin: 0 20px 80px 80px; 
+  margin: 5rem 2rem 8rem 8rem; 
 }
 #container img {
-  width: 200px;
-  height: 200px;
-  margin: 15px;
+  width: 20rem;
+  height: 20rem;
+  margin: 1.5rem;
 }
 #container {
   width: 50vw;
@@ -245,7 +261,7 @@ span {
 }
 ul {
   display: flex;
-  gap: 10px;
+  gap: 1rem;
   list-style: none;
   padding: 0;
 }
@@ -267,7 +283,7 @@ li {
 /*********projects***************/
 .portfolio h2 {
   font-size: 4rem;
-  margin-bottom: 100px;
+  margin-bottom: 10rem;
 }
 .portfolio-container {
   display: grid;
@@ -346,8 +362,6 @@ li {
   font-size: 3rem;
   color: var(--second-bg-color);
 }
-
-
 /***********toolbox***************/
 .toolbox-button a {
   display: flex;
@@ -761,7 +775,7 @@ footer {
     height: 250px;
   }
 }
-@media screen and (min-width: 640px) and (max-width: 767px) {
+@media screen and (min-width: 640px) and (max-width: 768px) {
   .navbar {
     display: none;
     flex-direction: column;
@@ -899,7 +913,7 @@ footer {
   
   /*********steamer*******/
   .head {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 450;
   }
   .arrow {
@@ -942,7 +956,7 @@ footer {
     display: none;
   }
 }
-@media screen and (min-width: 400px) and (max-width: 639px) {
+@media screen and (min-width: 400px) and (max-width: 640px) {
   .navbar {
     display: none;
     flex-direction: column;
@@ -958,7 +972,7 @@ footer {
     display: flex;
   }
   .navbar a {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: 1.5rem 2.5rem;
   }
   #menu-icon {
@@ -983,7 +997,7 @@ footer {
     width: 30rem;
   }
   .home-content .text h3 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 400;
   }
   .robot-home {
@@ -1092,7 +1106,7 @@ footer {
   }
   /********steamer*********/
   .head {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 450;
   }
   .arrow {
@@ -1142,7 +1156,7 @@ footer {
     display: none;
   }
 }
-@media screen and (min-width: 280px) and (max-width: 399px) {
+@media screen and (min-width: 280px) and (max-width: 400px) {
   .navbar {
     display: none;
     flex-direction: column;
@@ -1183,7 +1197,7 @@ footer {
     width: 30rem;
   }
   .home-content .text h3 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 400;
   }
   .robot-home {
@@ -1289,7 +1303,6 @@ footer {
     top: 30px;
     right: 55px;
   }
- 
   /******toolbox***********/
   #toolbox, #technoToolbox {
     font-size: 16px;
@@ -1301,7 +1314,7 @@ footer {
   }  
   /********steamer*********/
   .head {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 450;
   }
   .arrow {
@@ -1352,7 +1365,6 @@ footer {
   .contact-info{
     margin-left: 18px;
   }
-
   .contact-form {
     width: 85%;
     margin: 0 auto;
