@@ -21,7 +21,10 @@
   </head>
   <body>
     <header class="header">
-      <a href="index.html" class="logo">N.R</a>
+      <div class="logo-container">
+        <a href="index.html" class="logo">NR</a>
+        <p>Najet Ramoul</p>
+      </div>
       <div class="bx bx-menu" id="menu-icon"></div>
       <nav class="navbar">
         <a href="index.html" class="menu-link" id="home-link">Accueil</a>
@@ -49,15 +52,15 @@
         </div>
       </div>
       <model-viewer
-        class="robot-home"
-        src="./images/robot/scene.gltf"
-        camera-controls
-        disable-pan
-        disable-zoom
-        interaction-prompt="none"
-        field-of-view="lodog"
-        autoplay="experiment-Object - 150"
-      ></model-viewer>
+      class="robot-home falling-robot"
+      src="./images/robot/scene.gltf"
+      camera-controls
+      disable-pan
+      disable-zoom
+      interaction-prompt="none"
+      field-of-view="lodog"
+      autoplay="experiment-Object - 150"
+    ></model-viewer>
     </main>
     <footer>
       <div class="footer">
