@@ -15,18 +15,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
       integrity="sha512-+q2SVNNaUIPT8dGp7U89cW3mXMqPp1iVzQc7Z5s+Z2TJAs8UnM0WK6RRM+gS3gq+COk2U0kPUCb9QEwdEebZWA=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
+      referrerpolicy="no-referrer"/>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.legacy.js"
-    ></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer.legacy.js"></script>
   </head>
   <body>
     <header class="header">
@@ -52,29 +44,24 @@
         <h2 class="heading" id="contactMe" data-lang="fr">
           Contactez-<span>Moi</span> !
         </h2>
-
         <div class="contact-content">
           <div class="contact-info">
             <div class="contact-info-item">
               <i class="bx bxs-map"></i>
               <p>Mulhouse, France</p>
             </div>
-
             <div class="contact-info-item">
               <i class="bx bx-mail-send"></i>
-              <p>najet.ramoul68@gmail.com</p>
+              <p class="email">najet.ramoul68@gmail.com</p>
             </div>
-
             <div class="contact-info-item">
               <i class="bx bx-phone"></i>
               <p>06 59 57 95 62</p>
             </div>
-
             <div class="social">
               <a
                 href="https://www.linkedin.com/in/najet-ramoul-312845233/"
-                target="_blank"
-              >
+                target="_blank">
                 <i class="bx bxl-linkedin"></i>
               </a>
             </div>
@@ -98,7 +85,6 @@
                       <input type="text" id="name" placeholder="Nom" required />
                       <span class="focus"></span>
                     </div>
-
                     <div class="input-field">
                       <input
                         type="text"
@@ -110,7 +96,6 @@
                     </div>
                   </div>
                 </div>
-
                 <div class="input-box">
                   <div class="input-field">
                     <input
@@ -119,10 +104,8 @@
                       placeholder="Sujet"
                       required
                     />
-
                     <span class="focus"></span>
                   </div>
-
                   <div class="textarea-field">
                     <textarea
                       id="message"
@@ -135,7 +118,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="btn-box btns">
                 <button type="button" class="btn" onclick="sendMail();">
                   Envoyer
