@@ -419,4 +419,3 @@ let images = document.querySelectorAll(".image img");
 images.forEach(function (image) {
   image.addEventListener("click", enlargeImage);
 });
-
