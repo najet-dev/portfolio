@@ -548,7 +548,7 @@ li {
 }
 .social {
   bottom: 4rem;
-  width: 170px;
+  width: 100px;
   display: flex;
   justify-content: space-between;
 }
@@ -988,7 +988,7 @@ footer {
   }
   /*****************home********************/
   .logo {
-    width: 25px;
+    width: 85px;
   }
   .home-content h1 {
     font-size: 3rem;
