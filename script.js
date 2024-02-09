@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Email
 function sendMail() {
-  emailjs.init("OLC9XWnhpO7QsE0DA");
+  emailjs.init("9ok-h1S2BtLqNX760");
 
   // Retrieve field values
   let sendername = document.querySelector("#name").value;
@@ -120,8 +120,8 @@ function sendMail() {
     return;
   }
   // EmailJS service and template ID
-  let serviceID = "service_1gjwsyn";
-  let templateID = "template_88cm4wa";
+  let serviceID = "service_2k0ozxm";
+  let templateID = "template_t3laqv4";
 
   // Sending parameters
   let params = {
